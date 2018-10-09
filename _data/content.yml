@@ -1,0 +1,9 @@
+hero: hero-gv.jpg
+
+intro: 
+  backlink: Terug naar overzicht
+  type: Station
+  station: Utrecht Centraal
+  button:
+    text: Plattegrond
+    url: https://www.ns.nl/stationsinformatie/ut/utrecht-centraal/plattegrond
