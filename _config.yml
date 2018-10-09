@@ -1,0 +1,8 @@
+sass:
+    style: compressed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
