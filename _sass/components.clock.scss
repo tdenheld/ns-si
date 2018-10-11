@@ -1,0 +1,80 @@
+/*-------------------
+        Clock
+--------------------*/
+
+.clock {
+	position: relative;
+	padding: 4px;
+	background-color: $ns-white;
+	border-radius: 50%;
+    border: 16px solid rgba($ns-light-blue, 0.15);
+    line-height: 0;
+	
+	&__img {
+		width: 100%;
+	}
+	
+	&__minutes-container,
+	&__hours-container,
+	&__seconds-container {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	
+		
+	@keyframes rotate-clock {
+		100% {
+			transform: rotateZ(360deg);
+		}
+	}
+	
+	&__hours-container {
+		animation: rotate-clock 43200s infinite linear;
+	}
+	
+	&__minutes-container {
+		animation: rotate-clock 3600s infinite steps(60);
+	}
+	
+	&__seconds-container {
+		animation: rotate-clock 60s infinite steps(60);
+	}
+	
+	&__hours {
+		position: absolute;
+		width: 4%;
+		height: 38%;
+		left: 48%;
+		top: 20%;
+		transform-origin: 50% 80%;
+		background: $ns-grey;
+		border-radius: 20px 20px 0 0;
+	}
+	
+	&__minutes {
+		position: absolute;
+		width: 3%;
+		height: 57%;
+		left: 48.5%;
+		top: 3%;
+		transform-origin: 50% 82.5%;
+		background: $ns-grey;
+		border-radius: 20px 20px 0 0;
+	}
+	
+	&__seconds {
+		position: absolute;
+		width: 10%;
+		height: 60%;
+		top: 1%;
+		left: 44.95%;
+		background-image: url("/assets/img/clock/seconds.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		transform-origin: 50% 80%;
+		z-index: 8;
+	}
+}

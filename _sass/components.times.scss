@@ -1,0 +1,225 @@
+/*-------------------
+        Times
+--------------------*/
+
+.times__grid {
+    display: grid;
+    grid-gap: $gutter;
+
+    @include md {
+        grid-template-columns: 4fr 1fr;
+    }
+}
+
+.times__heading {
+    @include sm {
+        margin-bottom: $gutter;
+    }
+}
+
+.times__table {
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+    @include font-style(14px, bold, 1.4);
+    color: $ns-blue;
+
+    @include sm {
+        font-size: calculate-rem(16px);
+    }
+
+    @include md {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.times__row {
+    padding: $quarter-gutter $gutter;
+    display: grid;
+    grid-template-columns: 48px 5fr 48px;
+    grid-column-gap: $half-gutter;
+    align-items: center;
+    background-color: $ns-white;
+    overflow: hidden;
+
+    @include sm {
+        grid-template-columns: 48px 5fr 1fr 2fr;
+    }
+
+    @include md {
+        grid-column-gap: $gutter;
+        padding: 10px $half-gutter;
+    }
+
+    &--top {
+        font-size: calculate-rem(12px);
+        font-weight: normal;
+
+        @include sm {
+            font-size: calculate-rem(14px);
+            padding-top: $quarter-gutter;
+            padding-bottom: $quarter-gutter
+        }
+    }
+
+    &:nth-child(odd) {
+        background-color: $ns-blue-4;
+    }
+}
+
+.times__col {
+
+    // delay in transition triggered in tk305.generic.js
+    @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+            transition: all (200ms + ($i * 60)) $ease;
+        }
+    }
+
+    &--start {
+        align-self: start;
+    }
+
+    &--platform {
+        @include sm {
+            width: 45px;
+            height: 45px;
+            text-align: center;
+            padding-top: 13px;
+            background-image: url("/assets/img/platform.svg");
+            background-repeat: no-repeat;
+        }
+
+        &--btm {
+            background: none;
+            text-align: left;
+        }
+    }
+
+    &--train {
+        font-size: calculate-rem(14px);
+
+        @include lg {
+            font-size: calculate-rem(16px);
+        }
+    }
+}
+
+.times__via {
+    font-size: calculate-rem(14px);
+    font-weight: normal;
+}
+
+.times__logo {
+    position: relative;
+    top: -1px;
+    width: 28px;
+    margin-right: $quarter-gutter;
+}
+
+.times__line-150 {
+    line-height: 1.5;
+}
+
+.times__clock {
+    max-width: 236px;
+    margin: 0 auto;
+
+    @include md {
+        max-width: auto;
+    }
+}
+
+
+
+// toggle
+// -------------------------------------------------
+
+.times-toggle {
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    margin: 0;
+    padding-bottom: $gutter;
+    grid-gap: $half-gutter;
+    list-style: none;
+    color: $ns-blue;
+
+    @include sm {
+        grid-gap: $gutter;
+    }
+}
+
+.times-toggle__item {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    transition: $fade-all;
+    cursor: pointer;
+
+    svg {
+        fill: $ns-blue;
+        transition: $fade-all;
+    }
+
+    &:hover {
+        .times-toggle__title {
+            color: $ns-light-blue;
+        }
+
+        svg {
+            fill: $ns-light-blue;
+        }
+
+        .times-toggle__line {
+            background-color: $ns-grey-7;
+        }
+    }
+
+    &.is-active {
+        cursor: auto;
+
+        .times-toggle__title {
+            color: $ns-blue;
+            font-weight: bold;
+        }
+
+        svg {
+            fill: $ns-blue;
+        }
+
+        .times-toggle__line {
+            background-color: $ns-yellow;
+        }
+    }
+}
+
+.times-toggle__content {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    justify-content: center;
+    padding: 0 13px;
+
+    @include sm {
+        grid-gap: $quarter-gutter;
+        padding: 0;
+    }
+}
+
+.times-toggle__icon {
+    height: 35px;
+    line-height: 45px;
+    justify-self: center;
+}
+
+.times-toggle__title {
+    font-size: calculate-rem(14px);
+    margin-bottom: 0;
+}
+
+.times-toggle__line {
+    height: 3px;
+    transition: $fade-all;
+}
