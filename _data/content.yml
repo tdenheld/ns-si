@@ -2,6 +2,20 @@ hero: hero-gv.jpg
 backlink: Terug naar overzicht
 type: Station
 station: Utrecht Centraal
-button:
-  text: Plattegrond
-  url: https://www.ns.nl/stationsinformatie/ut/utrecht-centraal/plattegrond
+
+nav:
+  - link:
+      href: "#times"
+      class: js-scroll-to	
+    icon: clock--large
+    title: Vetrek & Aankomst
+  - link:
+      href: "#facilities"
+      class: js-scroll-to	
+    icon: bike-shed-year--large
+    title: Voorzieningen
+  - link:
+      href: "https://ns-station.netlify.com/plattegrond.html"
+      class: ""	
+    icon: map--large
+    title: Plattegrond

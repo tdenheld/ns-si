@@ -1535,18 +1535,46 @@
         <div class="bg-white">
     <div class="container header__content">
         <div class="grid">
-            <div class="grid__unit s-4-4">
+
+            <!-- heading-->
+            <div class="grid__unit">
                 <a class="arrowLink arrowLink--back mb-1" href="/">Terug naar overzicht</a>
                 <h1 class="headingXXL">Station <b>Utrecht Centraal</b></h1>
-                <div class="mb-3"></div>
-                <a class="button button--arrowRight" href="https://www.ns.nl/stationsinformatie/ut/utrecht-centraal/plattegrond">
-                    Plattegrond
-                </a>
             </div>
+
+            <!-- app navigation -->
+            <div class="grid__unit">
+                <div class="nav bo-t pt-4">
+                    
+                    <a href="#times" class="nav__link js-scroll-to">
+                        <div class="nav__item">
+                            <span class="nav__icon" include="/assets/img/icons/clock--large.svg"></span>
+                            <h3 class="nav__title">Vetrek & Aankomst</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="#facilities" class="nav__link js-scroll-to">
+                        <div class="nav__item">
+                            <span class="nav__icon" include="/assets/img/icons/bike-shed-year--large.svg"></span>
+                            <h3 class="nav__title">Voorzieningen</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="https://ns-station.netlify.com/plattegrond.html" class="nav__link ">
+                        <div class="nav__item">
+                            <span class="nav__icon" include="/assets/img/icons/map--large.svg"></span>
+                            <h3 class="nav__title">Plattegrond</h3>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
-<rio-si-facilities>
+
+<rio-si-facilities id="facilities">
     <div class="container container--header" data-type="cms-FacilitiesTitle">
         <h2 class="headingXL">Voorzieningen</h2>
     </div>
@@ -2081,8 +2109,8 @@
     <!-- JAVASCRIPT -->
     <script src="/assets/js/ns.generic.min.js"></script>
     <script src="/assets/js/bundle.min.js"></script>
-    <script src="/assets/js/tk.generic.js"></script>
-
+    <script src="/assets/js/main.js"></script>
+    
 </body>
 
 </html>

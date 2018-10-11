@@ -3,6 +3,33 @@ title: Utrecht Centraal | NS
 hero: g-Hero--major
 ---
 
-{% include intro.html %}
+<div class="bg-white">
+    <div class="container header__content">
+        <div class="grid">
+
+            <!-- heading-->
+            <div class="grid__unit">
+                <a class="arrowLink arrowLink--back mb-1" href="/">{{ site.data.content.backlink }}</a>
+                <h1 class="headingXXL">{{ site.data.content.type }} <b>{{ site.data.content.station }}</b></h1>
+            </div>
+
+            <!-- app navigation -->
+            <div class="grid__unit">
+                <div class="nav bo-t pt-4">
+                    {% for item in site.data.content.nav %}
+                    <a href="{{item.link.href}}" class="nav__link {{item.link.class}}">
+                        <div class="nav__item">
+                            <span class="nav__icon" include="/assets/img/icons/{{item.icon}}.svg"></span>
+                            <h3 class="nav__title">{{item.title}}</h3>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 {% include facilities.html %}
 {% include direct-links.html %}
