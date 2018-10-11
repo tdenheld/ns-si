@@ -116,7 +116,7 @@ $(document).ready(function () {
                     // hide all tables and show the one that's clicked
                     $(".js-tm-table").hide();
                     $(t).show();
-                }, 250);
+                }, 180);
 
                 // remove all active states of the toggle
                 $(".js-tm").removeClass("is-active");

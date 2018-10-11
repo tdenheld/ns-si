@@ -30,14 +30,17 @@
             <div class="times__row">
                 <div class="times__col times__col--start times__line-150 js-times-col">{{row.time}}</div>
                 <div class="times__col times__col--start js-times-col">
-                    <p class="times__line-150 ma-0">{{row.direction}}</p>
-                    <p class="times__via hidden-xs ma-0">
+                    <div class="times__line-150">
+                        {{row.direction}}
+                    </div>
+                    <div class="times__via hidden-xs">
                         {% if table.modality == 'train' %}via {% else %}richting {% endif %}
                         {{row.via}}
-                    </p>
-                    <p class="times__via visible-xs ma-0">{% if table.modality == 'train'
+                    </div>
+                    <div class="times__via visible-xs">{% if table.modality == 'train'
                         %}{{row.type}}{%
-                        else %}{{row.via}}{% endif %}</p>
+                        else %}{{row.via}}{% endif %}
+                    </div>
                 </div>
                 <div class="times__col times__col--platform {% unless table.modality == 'train' %}times__col--platform--btm{% endunless %} js-times-col">
                     {{row.platform}}
