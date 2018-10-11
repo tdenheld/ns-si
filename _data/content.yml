@@ -8,7 +8,7 @@ nav:
       href: "#times"
       class: js-scroll-to	
     icon: clock--large
-    title: Vetrek & Aankomst
+    title: Vetrektijden
   - link:
       href: "#facilities"
       class: js-scroll-to	

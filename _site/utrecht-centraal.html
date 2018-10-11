@@ -1543,13 +1543,13 @@
             </div>
 
             <!-- app navigation -->
-            <div class="grid__unit">
+            <div class="grid__unit mb-4">
                 <div class="nav bo-v pv-4">
                     
                     <a href="#times" class="nav__link js-scroll-to">
                         <div class="nav__item">
                             <span class="nav__icon" include="/assets/img/icons/clock--large.svg"></span>
-                            <h3 class="nav__title">Vetrek & Aankomst</h3>
+                            <h3 class="nav__title">Vetrektijden</h3>
                         </div>
                     </a>
                     
@@ -1571,746 +1571,748 @@
             </div>
 
             <!-- departures & arrivals -->
-            <div class="grid__unit" id="times">
+            <div class="grid__unit mb-4" id="times">
                 <h2 class="headingL fw-b mb-4">Vertrektijden</h2>
-                <div class="times__grid">
-                    <!-- toggle modalitities -->
-                    <ul class="times-toggle">
-                        
-                        <li class="times-toggle__item js-tm js-tm__train">
-                            <div class="times-toggle__content">
-                                <span class="times-toggle__icon" include="/assets/img/icons/train--small.svg"></span>
-                                <h3 class="times-toggle__title hidden-xs">Trein</h3>
-                            </div>
-                            <div class="times-toggle__line"></div>
-                        </li>
-                        
-                        <li class="times-toggle__item js-tm js-tm__metro">
-                            <div class="times-toggle__content">
-                                <span class="times-toggle__icon" include="/assets/img/icons/metro--small.svg"></span>
-                                <h3 class="times-toggle__title hidden-xs">Metro</h3>
-                            </div>
-                            <div class="times-toggle__line"></div>
-                        </li>
-                        
-                        <li class="times-toggle__item js-tm js-tm__tram">
-                            <div class="times-toggle__content">
-                                <span class="times-toggle__icon" include="/assets/img/icons/tram--small.svg"></span>
-                                <h3 class="times-toggle__title hidden-xs">Tram</h3>
-                            </div>
-                            <div class="times-toggle__line"></div>
-                        </li>
-                        
-                        <li class="times-toggle__item js-tm js-tm__bus">
-                            <div class="times-toggle__content">
-                                <span class="times-toggle__icon" include="/assets/img/icons/bus--small.svg"></span>
-                                <h3 class="times-toggle__title hidden-xs">Bus</h3>
-                            </div>
-                            <div class="times-toggle__line"></div>
-                        </li>
-                        
-                        <li class="times-toggle__item js-tm js-tm__ferry">
-                            <div class="times-toggle__content">
-                                <span class="times-toggle__icon" include="/assets/img/icons/ferry--small.svg"></span>
-                                <h3 class="times-toggle__title hidden-xs">Veerpont</h3>
-                            </div>
-                            <div class="times-toggle__line"></div>
-                        </li>
-                        
-                    </ul>
+
+<!-- toggle modalitities -->
+<ul class="times-toggle">
+    
+    <li class="times-toggle__item js-tm js-tm__train">
+        <div class="times-toggle__content">
+            <span class="times-toggle__icon" include="/assets/img/icons/train--small.svg"></span>
+            <h3 class="times-toggle__title hidden-xs">Trein</h3>
+        </div>
+        <div class="times-toggle__line"></div>
+    </li>
+    
+    <li class="times-toggle__item js-tm js-tm__metro">
+        <div class="times-toggle__content">
+            <span class="times-toggle__icon" include="/assets/img/icons/metro--small.svg"></span>
+            <h3 class="times-toggle__title hidden-xs">Metro</h3>
+        </div>
+        <div class="times-toggle__line"></div>
+    </li>
+    
+    <li class="times-toggle__item js-tm js-tm__tram">
+        <div class="times-toggle__content">
+            <span class="times-toggle__icon" include="/assets/img/icons/tram--small.svg"></span>
+            <h3 class="times-toggle__title hidden-xs">Tram</h3>
+        </div>
+        <div class="times-toggle__line"></div>
+    </li>
+    
+    <li class="times-toggle__item js-tm js-tm__bus">
+        <div class="times-toggle__content">
+            <span class="times-toggle__icon" include="/assets/img/icons/bus--small.svg"></span>
+            <h3 class="times-toggle__title hidden-xs">Bus</h3>
+        </div>
+        <div class="times-toggle__line"></div>
+    </li>
+    
+    <li class="times-toggle__item js-tm js-tm__ferry">
+        <div class="times-toggle__content">
+            <span class="times-toggle__icon" include="/assets/img/icons/ferry--small.svg"></span>
+            <h3 class="times-toggle__title hidden-xs">Veerpont</h3>
+        </div>
+        <div class="times-toggle__line"></div>
+    </li>
+    
+</ul>
+
+<div class="times__grid">
+    <div>
+        <!-- table displaying trains -->
+        
+        <div class="times__table js-tm-table js-tm-table__train">
+            <!-- top row -->
+            <div class="times__row times__row--top">
+                
+                <div class="times__col  js-times-col">Vertrek</div>
+                
+                <div class="times__col  js-times-col">Naar</div>
+                
+                <div class="times__col  js-times-col">Spoor</div>
+                
+                <div class="times__col hidden-xs js-times-col">Trein</div>
+                
+            </div>
+
+            <!-- data rows -->
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">19:53</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Maastricht</p>
+                    <p class="times__via hidden-xs ma-0">
+                        via 
+                        's-Hertogenbosch, Eindhoven, Weert, Roermond
+                    </p>
+                    <p class="times__via visible-xs ma-0"><i>Intercity</i></p>
                 </div>
-                <div class="times__grid">
-                    <div>
-                        <!-- table displaying trains -->
-                        
-                        <div class="times__table js-tm-table js-tm-table__train">
-                            <!-- top row -->
-                            <div class="times__row times__row--top">
-                                
-                                <div class="times__col  js-times-col">Vertrek</div>
-                                
-                                <div class="times__col  js-times-col">Naar</div>
-                                
-                                <div class="times__col  js-times-col">Spoor</div>
-                                
-                                <div class="times__col hidden-xs js-times-col">Trein</div>
-                                
-                            </div>
-
-                            <!-- data rows -->
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">19:53</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Maastricht</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        via 
-                                        's-Hertogenbosch, Eindhoven, Weert, Roermond
-                                    </p>
-                                    <p class="times__via visible-xs ma-0"><i>Intercity</i></p>
-                                </div>
-                                <div class="times__col times__col--platform  js-times-col">
-                                    18b
-                                </div>
-                                <div class="times__col  times__col--train  hidden-xs js-times-col">
-                                    
-                                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
-                                    
-                                    <i>Intercity</i>
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">19:56</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Rotterdam Centraal</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        via 
-                                        Gouda, Rotterdam Alexander
-                                    </p>
-                                    <p class="times__via visible-xs ma-0"><i>Intercity</i></p>
-                                </div>
-                                <div class="times__col times__col--platform  js-times-col">
-                                    8a
-                                </div>
-                                <div class="times__col  times__col--train  hidden-xs js-times-col">
-                                    
-                                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
-                                    
-                                    <i>Intercity</i>
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:01</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Baarn</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        via 
-                                        Den Dolder, Soest-Zuid, Soest
-                                    </p>
-                                    <p class="times__via visible-xs ma-0"><span class='fw-normal'>Sprinter</span></p>
-                                </div>
-                                <div class="times__col times__col--platform  js-times-col">
-                                    4
-                                </div>
-                                <div class="times__col  times__col--train  hidden-xs js-times-col">
-                                    
-                                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
-                                    
-                                    <span class='fw-normal'>Sprinter</span>
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:03</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Bovenkarspel-Grootebroek</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        via 
-                                        Amersfoort, Apeldoorn, Deventer, Hengelo
-                                    </p>
-                                    <p class="times__via visible-xs ma-0"><i>Intercity</i></p>
-                                </div>
-                                <div class="times__col times__col--platform  js-times-col">
-                                    14
-                                </div>
-                                <div class="times__col  times__col--train  hidden-xs js-times-col">
-                                    
-                                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
-                                    
-                                    <i>Intercity</i>
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:06</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Breukelen</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        via 
-                                        Utrecht Zuilen, Maarssen
-                                    </p>
-                                    <p class="times__via visible-xs ma-0"><span class='fw-normal'>Sprinter</span></p>
-                                </div>
-                                <div class="times__col times__col--platform  js-times-col">
-                                    5
-                                </div>
-                                <div class="times__col  times__col--train  hidden-xs js-times-col">
-                                    
-                                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
-                                    
-                                    <span class='fw-normal'>Sprinter</span>
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:11</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Den Helder</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        via 
-                                        Amsterdam Amstel, Amsterdam Centraal, Alkmaar
-                                    </p>
-                                    <p class="times__via visible-xs ma-0"><i>Intercity</i></p>
-                                </div>
-                                <div class="times__col times__col--platform  js-times-col">
-                                    7b
-                                </div>
-                                <div class="times__col  times__col--train  hidden-xs js-times-col">
-                                    
-                                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
-                                    
-                                    <i>Intercity</i>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="times__table js-tm-table js-tm-table__metro">
-                            <!-- top row -->
-                            <div class="times__row times__row--top">
-                                
-                                <div class="times__col  js-times-col">Vertrek</div>
-                                
-                                <div class="times__col  js-times-col">Lijn</div>
-                                
-                                <div class="times__col  js-times-col">Platform</div>
-                                
-                                <div class="times__col hidden-xs js-times-col">Vervoerder</div>
-                                
-                            </div>
-
-                            <!-- data rows -->
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">19:53</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Metro 51</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Westwijk
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Westwijk</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    1
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">19:56</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Metro 54</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Gein
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Gein</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    2
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:05</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Metro 53</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Gaasperplas
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Gaasperplas</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    1
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:10</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Metro 51</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Westwijk
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Westwijk</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    2
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:13</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Metro 54</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Gein
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Gein</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    1
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:16</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Metro 53</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Gaasperplas
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Gaasperplas</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    2
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="times__table js-tm-table js-tm-table__tram">
-                            <!-- top row -->
-                            <div class="times__row times__row--top">
-                                
-                                <div class="times__col  js-times-col">Vertrek</div>
-                                
-                                <div class="times__col  js-times-col">Lijn</div>
-                                
-                                <div class="times__col  js-times-col">Platform</div>
-                                
-                                <div class="times__col hidden-xs js-times-col">Vervoerder</div>
-                                
-                            </div>
-
-                            <!-- data rows -->
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">19:53</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Tram 5</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Nieuwegein Zuid
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Nieuwegein Zuid</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    G1
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    Connexxion
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">19:56</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Tram 4</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        IJsselstein
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">IJsselstein</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    A2
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    Syntus
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:05</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Tram 17</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        De Uithof
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">De Uithof</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    A1
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    U-BUS
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:10</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Tram 5</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Nieuwegein Centrum
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Nieuwegein Centrum</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    B2
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    Connexxion
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:13</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Tram 5</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Nieuwegein Zuid
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Nieuwegein Zuid</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    G4
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    Syntus
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:16</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Tram 17</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        De Uithof
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">De Uithof</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    D2
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVU
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="times__table js-tm-table js-tm-table__bus">
-                            <!-- top row -->
-                            <div class="times__row times__row--top">
-                                
-                                <div class="times__col  js-times-col">Vertrek</div>
-                                
-                                <div class="times__col  js-times-col">Lijn</div>
-                                
-                                <div class="times__col  js-times-col">Platform</div>
-                                
-                                <div class="times__col hidden-xs js-times-col">Vervoerder</div>
-                                
-                            </div>
-
-                            <!-- data rows -->
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">19:53</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Bus 2</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Centrum
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Centrum</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    B2
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    U-BUS
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">19:56</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Bus 6</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Oog in Al
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Oog in Al</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    G2
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    U-BUS
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:05</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Bus 16</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Zuilen
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Zuilen</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    H5
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    Syntus
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:10</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Bus 5</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Voordorp
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Voordorp</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    B2
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    U-BUS
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:13</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Bus 7</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Kanalen Eiland
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Kanalen Eiland</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    G4
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    U-BUS
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:16</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Bus 31</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        De Uithof
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">De Uithof</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    D2
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    Connexxion
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="times__table js-tm-table js-tm-table__ferry">
-                            <!-- top row -->
-                            <div class="times__row times__row--top">
-                                
-                                <div class="times__col  js-times-col">Vertrek</div>
-                                
-                                <div class="times__col  js-times-col">Lijn</div>
-                                
-                                <div class="times__col  js-times-col"></div>
-                                
-                                <div class="times__col hidden-xs js-times-col">Vervoerder</div>
-                                
-                            </div>
-
-                            <!-- data rows -->
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">19:53</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Veerdienst</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        NSDM
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">NSDM</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">19:56</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Veerdienst</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Buiksloterweg
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Buiksloterweg</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:05</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Veerdienst</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        IJplein
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">IJplein</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:10</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Veerdienst</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Buiksloterweg
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Buiksloterweg</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:13</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Veerdienst</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        NSDM
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">NSDM</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">20:16</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">Veerdienst</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        richting 
-                                        Buiksloterweg
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">Buiksloterweg</p>
-                                </div>
-                                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
-                                    
-                                </div>
-                                <div class="times__col  hidden-xs js-times-col">
-                                    
-                                    GVB
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
-                    <div class="times__clock hidden-sm hidden-xs">
-                        <div class="clock">
-                            <img src="/assets/img/clock/dial.svg" class="clock__img" />
-                            <div class="clock__hours-container">
-                                <div class="clock__hours"></div>
-                            </div>
-                            <div class="clock__minutes-container">
-                                <div class="clock__minutes"></div>
-                            </div>
-                            <div class="clock__seconds-container">
-                                <div class="clock__seconds"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="times__col times__col--platform  js-times-col">
+                    18b
                 </div>
+                <div class="times__col  times__col--train  hidden-xs js-times-col">
+                    
+                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
+                    
+                    <i>Intercity</i>
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">19:56</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Rotterdam Centraal</p>
+                    <p class="times__via hidden-xs ma-0">
+                        via 
+                        Gouda, Rotterdam Alexander
+                    </p>
+                    <p class="times__via visible-xs ma-0"><i>Intercity</i></p>
+                </div>
+                <div class="times__col times__col--platform  js-times-col">
+                    8a
+                </div>
+                <div class="times__col  times__col--train  hidden-xs js-times-col">
+                    
+                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
+                    
+                    <i>Intercity</i>
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:01</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Baarn</p>
+                    <p class="times__via hidden-xs ma-0">
+                        via 
+                        Den Dolder, Soest-Zuid, Soest
+                    </p>
+                    <p class="times__via visible-xs ma-0"><span class='fw-normal'>Sprinter</span></p>
+                </div>
+                <div class="times__col times__col--platform  js-times-col">
+                    4
+                </div>
+                <div class="times__col  times__col--train  hidden-xs js-times-col">
+                    
+                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
+                    
+                    <span class='fw-normal'>Sprinter</span>
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:03</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Bovenkarspel-Grootebroek</p>
+                    <p class="times__via hidden-xs ma-0">
+                        via 
+                        Amersfoort, Apeldoorn, Deventer, Hengelo
+                    </p>
+                    <p class="times__via visible-xs ma-0"><i>Intercity</i></p>
+                </div>
+                <div class="times__col times__col--platform  js-times-col">
+                    14
+                </div>
+                <div class="times__col  times__col--train  hidden-xs js-times-col">
+                    
+                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
+                    
+                    <i>Intercity</i>
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:06</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Breukelen</p>
+                    <p class="times__via hidden-xs ma-0">
+                        via 
+                        Utrecht Zuilen, Maarssen
+                    </p>
+                    <p class="times__via visible-xs ma-0"><span class='fw-normal'>Sprinter</span></p>
+                </div>
+                <div class="times__col times__col--platform  js-times-col">
+                    5
+                </div>
+                <div class="times__col  times__col--train  hidden-xs js-times-col">
+                    
+                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
+                    
+                    <span class='fw-normal'>Sprinter</span>
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:11</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Den Helder</p>
+                    <p class="times__via hidden-xs ma-0">
+                        via 
+                        Amsterdam Amstel, Amsterdam Centraal, Alkmaar
+                    </p>
+                    <p class="times__via visible-xs ma-0"><i>Intercity</i></p>
+                </div>
+                <div class="times__col times__col--platform  js-times-col">
+                    7b
+                </div>
+                <div class="times__col  times__col--train  hidden-xs js-times-col">
+                    
+                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
+                    
+                    <i>Intercity</i>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="times__table js-tm-table js-tm-table__metro">
+            <!-- top row -->
+            <div class="times__row times__row--top">
+                
+                <div class="times__col  js-times-col">Vertrek</div>
+                
+                <div class="times__col  js-times-col">Lijn</div>
+                
+                <div class="times__col  js-times-col">Platform</div>
+                
+                <div class="times__col hidden-xs js-times-col">Vervoerder</div>
+                
+            </div>
+
+            <!-- data rows -->
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">19:53</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Metro 51</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Westwijk
+                    </p>
+                    <p class="times__via visible-xs ma-0">Westwijk</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    1
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">19:56</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Metro 54</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Gein
+                    </p>
+                    <p class="times__via visible-xs ma-0">Gein</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    2
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:05</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Metro 53</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Gaasperplas
+                    </p>
+                    <p class="times__via visible-xs ma-0">Gaasperplas</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    1
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:10</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Metro 51</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Westwijk
+                    </p>
+                    <p class="times__via visible-xs ma-0">Westwijk</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    2
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:13</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Metro 54</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Gein
+                    </p>
+                    <p class="times__via visible-xs ma-0">Gein</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    1
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:16</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Metro 53</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Gaasperplas
+                    </p>
+                    <p class="times__via visible-xs ma-0">Gaasperplas</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    2
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="times__table js-tm-table js-tm-table__tram">
+            <!-- top row -->
+            <div class="times__row times__row--top">
+                
+                <div class="times__col  js-times-col">Vertrek</div>
+                
+                <div class="times__col  js-times-col">Lijn</div>
+                
+                <div class="times__col  js-times-col">Platform</div>
+                
+                <div class="times__col hidden-xs js-times-col">Vervoerder</div>
+                
+            </div>
+
+            <!-- data rows -->
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">19:53</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Tram 5</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Nieuwegein Zuid
+                    </p>
+                    <p class="times__via visible-xs ma-0">Nieuwegein Zuid</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    G1
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    Connexxion
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">19:56</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Tram 4</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        IJsselstein
+                    </p>
+                    <p class="times__via visible-xs ma-0">IJsselstein</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    A2
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    Syntus
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:05</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Tram 17</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        De Uithof
+                    </p>
+                    <p class="times__via visible-xs ma-0">De Uithof</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    A1
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    U-BUS
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:10</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Tram 5</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Nieuwegein Centrum
+                    </p>
+                    <p class="times__via visible-xs ma-0">Nieuwegein Centrum</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    B2
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    Connexxion
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:13</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Tram 5</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Nieuwegein Zuid
+                    </p>
+                    <p class="times__via visible-xs ma-0">Nieuwegein Zuid</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    G4
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    Syntus
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:16</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Tram 17</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        De Uithof
+                    </p>
+                    <p class="times__via visible-xs ma-0">De Uithof</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    D2
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVU
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="times__table js-tm-table js-tm-table__bus">
+            <!-- top row -->
+            <div class="times__row times__row--top">
+                
+                <div class="times__col  js-times-col">Vertrek</div>
+                
+                <div class="times__col  js-times-col">Lijn</div>
+                
+                <div class="times__col  js-times-col">Platform</div>
+                
+                <div class="times__col hidden-xs js-times-col">Vervoerder</div>
+                
+            </div>
+
+            <!-- data rows -->
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">19:53</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Bus 2</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Centrum
+                    </p>
+                    <p class="times__via visible-xs ma-0">Centrum</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    B2
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    U-BUS
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">19:56</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Bus 6</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Oog in Al
+                    </p>
+                    <p class="times__via visible-xs ma-0">Oog in Al</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    G2
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    U-BUS
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:05</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Bus 16</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Zuilen
+                    </p>
+                    <p class="times__via visible-xs ma-0">Zuilen</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    H5
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    Syntus
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:10</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Bus 5</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Voordorp
+                    </p>
+                    <p class="times__via visible-xs ma-0">Voordorp</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    B2
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    U-BUS
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:13</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Bus 7</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Kanalen Eiland
+                    </p>
+                    <p class="times__via visible-xs ma-0">Kanalen Eiland</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    G4
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    U-BUS
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:16</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Bus 31</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        De Uithof
+                    </p>
+                    <p class="times__via visible-xs ma-0">De Uithof</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    D2
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    Connexxion
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="times__table js-tm-table js-tm-table__ferry">
+            <!-- top row -->
+            <div class="times__row times__row--top">
+                
+                <div class="times__col  js-times-col">Vertrek</div>
+                
+                <div class="times__col  js-times-col">Lijn</div>
+                
+                <div class="times__col  js-times-col"></div>
+                
+                <div class="times__col hidden-xs js-times-col">Vervoerder</div>
+                
+            </div>
+
+            <!-- data rows -->
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">19:53</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Veerdienst</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        NSDM
+                    </p>
+                    <p class="times__via visible-xs ma-0">NSDM</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">19:56</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Veerdienst</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Buiksloterweg
+                    </p>
+                    <p class="times__via visible-xs ma-0">Buiksloterweg</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:05</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Veerdienst</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        IJplein
+                    </p>
+                    <p class="times__via visible-xs ma-0">IJplein</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:10</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Veerdienst</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Buiksloterweg
+                    </p>
+                    <p class="times__via visible-xs ma-0">Buiksloterweg</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:13</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Veerdienst</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        NSDM
+                    </p>
+                    <p class="times__via visible-xs ma-0">NSDM</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+            <div class="times__row">
+                <div class="times__col times__col--start times__line-150 js-times-col">20:16</div>
+                <div class="times__col times__col--start js-times-col">
+                    <p class="times__line-150 ma-0">Veerdienst</p>
+                    <p class="times__via hidden-xs ma-0">
+                        richting 
+                        Buiksloterweg
+                    </p>
+                    <p class="times__via visible-xs ma-0">Buiksloterweg</p>
+                </div>
+                <div class="times__col times__col--platform times__col--platform--btm js-times-col">
+                    
+                </div>
+                <div class="times__col  hidden-xs js-times-col">
+                    
+                    GVB
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <!-- Clock -->
+    <div class="times__clock hidden-sm hidden-xs">
+        <div class="clock">
+            <img src="/assets/img/clock/dial.svg" class="clock__img" />
+            <div class="clock__hours-container">
+                <div class="clock__hours"></div>
+            </div>
+            <div class="clock__minutes-container">
+                <div class="clock__minutes"></div>
+            </div>
+            <div class="clock__seconds-container">
+                <div class="clock__seconds"></div>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
 
         </div>
@@ -2662,24 +2664,18 @@
         <div class="grid">
             <div class="grid__unit s-4-4 m-12-12 l-10-12 l-push-left-1-12">
                 <ul class="list list--3Cols">
-                    <li class="list__item"><a class="arrowLink" routerlink="/asd/amsterdam-centraal" href="/stationsinformatie/asd/amsterdam-centraal">Amsterdam
-                            Centraal</a></li>
+                    <li class="list__item"><a class="arrowLink" href="/stationsinformatie/asd/amsterdam-centraal">Amsterdam Centraal</a></li>
                     <li class="list__item"><a class="arrowLink" href="/utrecht-centraal">Utrecht Centraal</a></li>
-                    <li class="list__item"><a class="arrowLink" routerlink="/asb/amsterdam-bijlmer-arena" href="/stationsinformatie/asb/amsterdam-bijlmer-arena">Amsterdam
-                            Bijlmer ArenA</a></li>
-                    <li class="list__item"><a class="arrowLink" routerlink="/gvc/den-haag-centraal" href="/stationsinformatie/gvc/den-haag-centraal">Den
-                            Haag Centraal</a></li>
-                    <li class="list__item"><a class="arrowLink" routerlink="/rtd/rotterdam-centraal" href="/stationsinformatie/rtd/rotterdam-centraal">Rotterdam
-                            Centraal</a></li>
-                    <li class="list__item"><a class="arrowLink" routerlink="/gn/groningen" href="/stationsinformatie/gn/groningen">Groningen</a></li>
-                    <li class="list__item"><a class="arrowLink" routerlink="/ehv/eindhoven" href="/stationsinformatie/ehv/eindhoven">Eindhoven</a></li>
-                    <li class="list__item"><a class="arrowLink" routerlink="/ht/s-hertogenbosch" href="/stationsinformatie/ht/s-hertogenbosch">'s-Hertogenbosch</a></li>
-                    <li class="list__item"><a class="arrowLink" routerlink="/shl/schiphol-airport" href="/stationsinformatie/shl/schiphol-airport">Schiphol
-                            Airport</a></li>
-                    <li class="list__item"><a class="arrowLink" routerlink="/nm/nijmegen" href="/stationsinformatie/nm/nijmegen">Nijmegen</a></li>
-                    <li class="list__item"><a class="arrowLink" routerlink="/zl/zwolle" href="/stationsinformatie/zl/zwolle">Zwolle</a></li>
-                    <li class="list__item"><a class="arrowLink" routerlink="/ledn/leiden-centraal" href="/stationsinformatie/ledn/leiden-centraal">Leiden
-                            Centraal</a></li>
+                    <li class="list__item"><a class="arrowLink" href="/stationsinformatie/asb/amsterdam-bijlmer-arena">Amsterdam Bijlmer ArenA</a></li>
+                    <li class="list__item"><a class="arrowLink" href="/stationsinformatie/gvc/den-haag-centraal">Den Haag Centraal</a></li>
+                    <li class="list__item"><a class="arrowLink" href="/stationsinformatie/rtd/rotterdam-centraal">Rotterdam Centraal</a></li>
+                    <li class="list__item"><a class="arrowLink" href="/stationsinformatie/gn/groningen">Groningen</a></li>
+                    <li class="list__item"><a class="arrowLink" href="/stationsinformatie/ehv/eindhoven">Eindhoven</a></li>
+                    <li class="list__item"><a class="arrowLink" href="/stationsinformatie/ht/s-hertogenbosch">'s-Hertogenbosch</a></li>
+                    <li class="list__item"><a class="arrowLink" href="/stationsinformatie/shl/schiphol-airport">Schiphol Airport</a></li>
+                    <li class="list__item"><a class="arrowLink" href="/stationsinformatie/nm/nijmegen">Nijmegen</a></li>
+                    <li class="list__item"><a class="arrowLink" href="/stationsinformatie/zl/zwolle">Zwolle</a></li>
+                    <li class="list__item"><a class="arrowLink" href="/stationsinformatie/ledn/leiden-centraal">Leiden Centraal</a></li>
                 </ul>
             </div>
         </div>

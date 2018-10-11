@@ -14,7 +14,7 @@ hero: g-Hero--major
             </div>
 
             <!-- app navigation -->
-            <div class="grid__unit">
+            <div class="grid__unit mb-4">
                 <div class="nav bo-v pv-4">
                     {% for item in site.data.content.nav %}
                     <a href="{{item.link.href}}" class="nav__link {{item.link.class}}">
@@ -28,76 +28,8 @@ hero: g-Hero--major
             </div>
 
             <!-- departures & arrivals -->
-            <div class="grid__unit" id="times">
-                <h2 class="headingL fw-b mb-4">Vertrektijden</h2>
-                <div class="times__grid">
-                    <!-- toggle modalitities -->
-                    <ul class="times-toggle">
-                        {% for item in site.data.times.modality %}
-                        <li class="times-toggle__item js-tm js-tm__{{item.icon}}">
-                            <div class="times-toggle__content">
-                                <span class="times-toggle__icon" include="/assets/img/icons/{{item.icon}}--small.svg"></span>
-                                <h3 class="times-toggle__title hidden-xs">{{item.title}}</h3>
-                            </div>
-                            <div class="times-toggle__line"></div>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="times__grid">
-                    <div>
-                        <!-- table displaying trains -->
-                        {% for table in site.data.times.table %}
-                        <div class="times__table js-tm-table js-tm-table__{{table.modality}}">
-                            <!-- top row -->
-                            <div class="times__row times__row--top">
-                                {% for col in table.cols %}
-                                <div class="times__col {% if forloop.last %}hidden-xs{% endif %} js-times-col">{{col.label}}</div>
-                                {% endfor %}
-                            </div>
-
-                            <!-- data rows -->
-                            {% for row in table.rows %}
-                            <div class="times__row">
-                                <div class="times__col times__col--start times__line-150 js-times-col">{{row.time}}</div>
-                                <div class="times__col times__col--start js-times-col">
-                                    <p class="times__line-150 ma-0">{{row.direction}}</p>
-                                    <p class="times__via hidden-xs ma-0">
-                                        {% if table.modality == 'train' %}via {% else %}richting {% endif %}
-                                        {{row.via}}
-                                    </p>
-                                    <p class="times__via visible-xs ma-0">{% if table.modality == 'train' %}{{row.type}}{%
-                                        else %}{{row.via}}{% endif %}</p>
-                                </div>
-                                <div class="times__col times__col--platform {% unless table.modality == 'train' %}times__col--platform--btm{% endunless %} js-times-col">
-                                    {{row.platform}}
-                                </div>
-                                <div class="times__col {% if table.modality == 'train' %} times__col--{{table.modality}} {% endif %} hidden-xs js-times-col">
-                                    {% if table.modality == "train" %}
-                                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
-                                    {% endif %}
-                                    {{row.type}}
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                        {% endfor %}
-                    </div>
-                    <div class="times__clock hidden-sm hidden-xs">
-                        <div class="clock">
-                            <img src="/assets/img/clock/dial.svg" class="clock__img" />
-                            <div class="clock__hours-container">
-                                <div class="clock__hours"></div>
-                            </div>
-                            <div class="clock__minutes-container">
-                                <div class="clock__minutes"></div>
-                            </div>
-                            <div class="clock__seconds-container">
-                                <div class="clock__seconds"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="grid__unit mb-4" id="times">
+                {% include times.html %}
             </div>
 
         </div>
