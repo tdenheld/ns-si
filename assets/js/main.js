@@ -105,7 +105,7 @@ $(document).ready(function () {
                 // set delay to let the transition fade out the current state
                 setTimeout(function () {
                     // slide in new cols
-                    TweenMax.fromTo(".js-times-col", 0.001, {
+                    TweenMax.fromTo(".js-times-col", 0.01, {
                         x: 75,
                         autoAlpha: 0
                     }, {

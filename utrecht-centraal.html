@@ -9,7 +9,9 @@ hero: g-Hero--major
 
             <!-- heading-->
             <div class="grid__unit">
-                <a class="arrowLink arrowLink--back mb-1" href="/">{{ site.data.content.backlink }}</a>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">{{ site.data.content.breadcrum }}</a></li>
+                </ul>
                 <h1 class="headingXXL">{{ site.data.content.type }} <b>{{ site.data.content.station }}</b></h1>
             </div>
 
@@ -37,4 +39,3 @@ hero: g-Hero--major
 </div>
 
 {% include facilities.html %}
-{% include direct-links.html %}
