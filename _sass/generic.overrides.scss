@@ -2,6 +2,10 @@
   generic overrides
 -------------------*/
 
+.content {
+    overflow: hidden;
+}
+
 .arrowLink--blue {
 	color: $ns-blue;
 
