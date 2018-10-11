@@ -126,13 +126,13 @@
     margin: 0 auto;
 
     @include md {
-        max-width: auto;
+        max-width: none;
     }
 }
 
 
 
-// toggle
+// toggle modalities
 // -------------------------------------------------
 
 .times-toggle {
