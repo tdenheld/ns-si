@@ -29,9 +29,14 @@ hero: g-Hero--major
                 </div>
             </div>
 
-            <!-- departures & arrivals -->
+            <!-- departures -->
             <div class="grid__unit mb-4" id="times">
-                {% include times.html %}
+                {% include times.html heading="Vertrektijden" %}
+            </div>
+
+            <!-- arrivals -->
+            <div class="grid__unit mb-4" id="times">
+                {% include times.html heading="Aankomsttijden" %}
             </div>
 
         </div>

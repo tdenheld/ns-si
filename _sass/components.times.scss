@@ -2,7 +2,7 @@
         Times
 --------------------*/
 
-.times__grid {
+.times {
     display: grid;
     grid-gap: $gutter;
 
@@ -36,14 +36,14 @@
 .times__row {
     padding: $quarter-gutter $gutter;
     display: grid;
-    grid-template-columns: 48px 5fr 48px;
+    grid-template-columns: 56px 5fr 48px;
     grid-column-gap: $half-gutter;
     align-items: center;
     background-color: $ns-white;
     overflow: hidden;
 
     @include sm {
-        grid-template-columns: 48px 5fr 1fr 2fr;
+        grid-template-columns: 64px 5fr 1fr 2fr;
     }
 
     @include md {
@@ -110,8 +110,6 @@
 }
 
 .times__logo {
-    position: relative;
-    top: -1px;
     width: 28px;
     margin-right: $quarter-gutter;
 }
@@ -126,6 +124,14 @@
 
     @include md {
         max-width: none;
+    }
+}
+
+.times--arrivals {
+    .times__row {
+        &:nth-child(odd) {
+            background-color: mix($ns-yellow, $ns-white, 20%);
+        }
     }
 }
 

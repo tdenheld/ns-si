@@ -13,7 +13,6 @@ modality:
 table:
 - modality: train
   cols:
-  - label: Vertrek
   - label: Naar
   - label: Spoor
   - label: Trein
@@ -51,7 +50,6 @@ table:
 
 - modality: metro
   cols:
-  - label: Vertrek
   - label: Lijn
   - label: Platform
   - label: Vervoerder
@@ -89,7 +87,6 @@ table:
 
 - modality: tram
   cols:
-  - label: Vertrek
   - label: Lijn
   - label: Platform
   - label: Vervoerder
@@ -127,7 +124,6 @@ table:
 
 - modality: bus
   cols:
-  - label: Vertrek
   - label: Lijn
   - label: Platform
   - label: Vervoerder
@@ -165,7 +161,6 @@ table:
 
 - modality: ferry
   cols:
-  - label: Vertrek
   - label: Lijn
   - label: ''
   - label: Vervoerder

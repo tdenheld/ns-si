@@ -1,4 +1,4 @@
-<h2 class="headingXL mb-4">Vertrektijden</h2>
+<h2 class="headingXL mb-4">{{ include.heading }}</h2>
 
 <!-- toggle modalitities -->
 <ul class="times-toggle">
@@ -13,13 +13,16 @@
     {% endfor %}
 </ul>
 
-<div class="times__grid">
+<div class="times {% if include.heading == 'Aankomsttijden' %}times--arrivals{% endif %}">
     <div>
         <!-- table displaying trains -->
         {% for table in site.data.times.table %}
         <div class="times__table js-tm-table js-tm-table__{{table.modality}}">
             <!-- top row -->
             <div class="times__row times__row--top">
+                <div class="times__col js-times-col">
+                    {% if include.heading == 'Vertrektijden' %}Vertrek{% else %}Aankomst{% endif %}
+                </div>
                 {% for col in table.cols %}
                 <div class="times__col {% if forloop.last %}hidden-xs{% endif %} js-times-col">{{col.label}}</div>
                 {% endfor %}
@@ -37,9 +40,8 @@
                         {% if table.modality == 'train' %}via {% else %}richting {% endif %}
                         {{row.via}}
                     </div>
-                    <div class="times__via visible-xs">{% if table.modality == 'train'
-                        %}{{row.type}}{%
-                        else %}{{row.via}}{% endif %}
+                    <div class="times__via visible-xs">{% if table.modality == 'train' %} {{row.type}}
+                        {% else %} {{row.via}} {% endif %}
                     </div>
                 </div>
                 <div class="times__col times__col--platform {% unless table.modality == 'train' %}times__col--platform--btm{% endunless %} js-times-col">
@@ -58,6 +60,7 @@
     </div>
 
     <!-- Clock -->
+    {% if include.heading == 'Vertrektijden' %}
     <div class="times__clock hidden-sm hidden-xs">
         <div class="clock">
             <img src="/assets/img/clock/dial.svg" class="clock__img" />
@@ -72,4 +75,5 @@
             </div>
         </div>
     </div>
+    {% endif %}
 </div>
