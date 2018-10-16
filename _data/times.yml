@@ -1,14 +1,8 @@
 modality:
-- icon: train
+- class: train
   title: Trein
-- icon: metro
-  title: Metro
-- icon: tram
-  title: Tram
-- icon: bus
-  title: Bus
-- icon: ferry
-  title: Veerpont
+- class: btm
+  title: Bus en Tram
 
 table:
 - modality: train
@@ -31,6 +25,7 @@ table:
     direction: Baarn
     via: Den Dolder, Soest-Zuid, Soest
     platform: '4'
+    alert: true
     type: "<span class='fw-normal'>Sprinter</span>"
   - time: '20:03'
     direction: Bovenkarspel-Grootebroek
@@ -48,81 +43,7 @@ table:
     platform: 7b
     type: "<i>Intercity</i>"
 
-- modality: metro
-  cols:
-  - label: Lijn
-  - label: Platform
-  - label: Vervoerder
-  rows:
-  - time: '19:53'
-    direction: Metro 51
-    via: Westwijk
-    platform: '1'
-    type: GVB
-  - time: '19:56'
-    direction: Metro 54
-    via: Gein
-    platform: '2'
-    type: GVB
-  - time: '20:05'
-    direction: Metro 53
-    via: Gaasperplas
-    platform: '1'
-    type: GVB
-  - time: '20:10'
-    direction: Metro 51
-    via: Westwijk
-    platform: '2'
-    type: GVB
-  - time: '20:13'
-    direction: Metro 54
-    via: Gein
-    platform: '1'
-    type: GVB
-  - time: '20:16'
-    direction: Metro 53
-    via: Gaasperplas
-    platform: '2'
-    type: GVB
-
-- modality: tram
-  cols:
-  - label: Lijn
-  - label: Platform
-  - label: Vervoerder
-  rows:
-  - time: '19:53'
-    direction: Tram 5
-    via: Nieuwegein Zuid
-    platform: G1
-    type: Connexxion
-  - time: '19:56'
-    direction: Tram 4
-    via: IJsselstein
-    platform: A2
-    type: Syntus
-  - time: '20:05'
-    direction: Tram 17
-    via: De Uithof
-    platform: A1
-    type: U-BUS
-  - time: '20:10'
-    direction: Tram 5
-    via: Nieuwegein Centrum
-    platform: B2
-    type: Connexxion
-  - time: '20:13'
-    direction: Tram 5
-    via: Nieuwegein Zuid
-    platform: G4
-    type: Syntus
-  - time: '20:16'
-    direction: Tram 17
-    via: De Uithof
-    platform: D2
-    type: GVU
-
-- modality: bus
+- modality: btm
   cols:
   - label: Lijn
   - label: Platform
@@ -134,7 +55,7 @@ table:
     platform: B2
     type: U-BUS
   - time: '19:56'
-    direction: Bus 6
+    direction: Tram 6
     via: Oog in Al
     platform: G2
     type: U-BUS
@@ -144,7 +65,7 @@ table:
     platform: H5
     type: Syntus
   - time: '20:10'
-    direction: Bus 5
+    direction: Tram 5
     via: Voordorp
     platform: B2
     type: U-BUS
@@ -158,42 +79,3 @@ table:
     via: De Uithof
     platform: D2
     type: Connexxion
-
-- modality: ferry
-  cols:
-  - label: Lijn
-  - label: ''
-  - label: Vervoerder
-  rows:
-  - time: '19:53'
-    direction: Veerdienst
-    via: NSDM
-    platform: ''
-    type: GVB
-  - time: '19:56'
-    direction: Veerdienst
-    via: Buiksloterweg
-    platform: ''
-    type: GVB
-  - time: '20:05'
-    direction: Veerdienst
-    via: IJplein
-    platform: ''
-    type: GVB
-  - time: '20:10'
-    direction: Veerdienst
-    via: Buiksloterweg
-    platform: ''
-    type: GVB
-  - time: '20:13'
-    direction: Veerdienst
-    via: NSDM
-    platform: ''
-    type: GVB
-  - time: '20:16'
-    direction: Veerdienst
-    via: Buiksloterweg
-    platform: ''
-    type: GVB
-    
-more: Meer vertrektijden

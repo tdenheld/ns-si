@@ -3,7 +3,7 @@
 --------------------*/
 
 .btn {
-	transition: all 200ms $ease;
+	transition: $fade-link;
 	
 	&--ghost {
 		background: transparent;
@@ -17,6 +17,13 @@
 			background-color: rgba($ns-blue, 0.1);
 			color: $ns-blue;
 		}
+
+        &:active,
+        &:focus,
+        &:visited, {
+            background: transparent;
+            outline: none;
+        }
 		
 		&--white {
 			color: $ns-white;
@@ -45,7 +52,16 @@
 	&--blue {
 		background: linear-gradient(
 			110deg, #0050A8 0%, $ns-light-blue 100%);	
-	}
+    }
+    
+    &--icon {
+        position: relative;
+        
+        svg {
+            position: absolute;
+            fill: $ns-blue;
+        }
+    }
 }
 
 .btn__link,

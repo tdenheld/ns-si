@@ -2,20 +2,6 @@ hero: hero-gv.jpg
 breadcrum: Stationsinformatie
 type: Station
 station: Utrecht Centraal
-
-nav:
-  - link:
-      href: "#times"
-      class: js-scroll-to	
-    icon: clock--large
-    title: Vetrektijden
-  - link:
-      href: "#facilities"
-      class: js-scroll-to	
-    icon: bike-shed-year--large
-    title: Voorzieningen
-  - link:
-      href: "https://ns-station.netlify.com/plattegrond.html"
-      class: ""	
-    icon: map--large
-    title: Plattegrond
+map-button:
+  url: "https://ns-station.netlify.com/plattegrond.html"
+  content: Bekijk plattegrond

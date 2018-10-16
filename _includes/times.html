@@ -1,19 +1,21 @@
-<h2 class="headingXL mb-4">{{ include.heading }}</h2>
+<h2 class="headingXL gridHeader__heading">Vertrektijden</h2>
+<a class="gridHeader--link tk-link tk-link--icon">
+    <span include="/assets/img/icons/clock-S--small.svg"></span>
+    Aankomsttijden
+</a>
+<div class="mb-4"></div>
 
 <!-- toggle modalitities -->
-<ul class="times-toggle">
+<ul class="times-toggle mb-3">
     {% for item in site.data.times.modality %}
-    <li class="times-toggle__item js-tm js-tm__{{item.icon}}">
-        <div class="times-toggle__content">
-            <span class="times-toggle__icon" include="/assets/img/icons/{{item.icon}}--small.svg"></span>
-            <h3 class="times-toggle__title hidden-xs">{{item.title}}</h3>
-        </div>
+    <li class="times-toggle__item js-tm js-tm__{{item.class}}">
+        <h3 class="times-toggle__title">{{item.title}}</h3>
         <div class="times-toggle__line"></div>
     </li>
     {% endfor %}
 </ul>
 
-<div class="times {% if include.heading == 'Aankomsttijden' %}times--arrivals{% endif %}">
+<div class="times mb-2">
     <div>
         <!-- table displaying trains -->
         {% for table in site.data.times.table %}
@@ -21,7 +23,7 @@
             <!-- top row -->
             <div class="times__row times__row--top">
                 <div class="times__col js-times-col">
-                    {% if include.heading == 'Vertrektijden' %}Vertrek{% else %}Aankomst{% endif %}
+                    Vertrek
                 </div>
                 {% for col in table.cols %}
                 <div class="times__col {% if forloop.last %}hidden-xs{% endif %} js-times-col">{{col.label}}</div>
@@ -37,8 +39,13 @@
                         {{row.direction}}
                     </div>
                     <div class="times__via hidden-xs">
-                        {% if table.modality == 'train' %}via {% else %}richting {% endif %}
-                        {{row.via}}
+                        <div class="hidden-xs">
+                            {% if table.modality == 'train' %}via {% else %}richting {% endif %}
+                            {{row.via}}
+                        </div>
+                        {% if row.alert %}
+                        <div class="f-red">Dit is een gewijzigd vertrekspoor</div>
+                        {% endif %}
                     </div>
                     <div class="times__via visible-xs">{% if table.modality == 'train' %} {{row.type}}
                         {% else %} {{row.via}} {% endif %}
@@ -60,7 +67,6 @@
     </div>
 
     <!-- Clock -->
-    {% if include.heading == 'Vertrektijden' %}
     <div class="times__clock hidden-sm hidden-xs">
         <div class="clock">
             <img src="/assets/img/clock/dial.svg" class="clock__img" />
@@ -75,5 +81,6 @@
             </div>
         </div>
     </div>
-    {% endif %}
 </div>
+
+<a class="iconLink iconLink--scroll-down">Meer vertrektijden</a>

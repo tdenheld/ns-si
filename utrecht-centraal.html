@@ -8,35 +8,20 @@ hero: g-Hero--major
         <div class="grid">
 
             <!-- heading-->
-            <div class="grid__unit">
+            <div class="grid__unit mb-6">
                 <ul class="breadcrumb">
                     <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">{{ site.data.content.breadcrum }}</a></li>
                 </ul>
-                <h1 class="f40 f72-md fw-b lh-solid">{{ site.data.content.station }}</h1>
+                <h1 class="f40 f72-md fw-b lh-solid mb-3">{{ site.data.content.station }}</h1>
+                <a href="{{ site.data.content.map-button.url }}" class="button btn btn--ghost btn--icon">
+                    <span include="/assets/img/icons/map--small.svg"></span>
+                    <span class="ml-5">{{ site.data.content.map-button.content }}</span>
+                </a>
             </div>
 
-            <!-- app navigation -->
-            <div class="grid__unit mb-4">
-                <div class="nav bo-v pv-4">
-                    {% for item in site.data.content.nav %}
-                    <a href="{{item.link.href}}" class="nav__link {{item.link.class}}">
-                        <div class="nav__item">
-                            <span class="nav__icon" include="/assets/img/icons/{{item.icon}}.svg"></span>
-                            <h3 class="nav__title">{{item.title}}</h3>
-                        </div>
-                    </a>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <!-- departures -->
+            <!-- departures & arrivals -->
             <div class="grid__unit mb-4" id="times">
-                {% include times.html heading="Vertrektijden" %}
-            </div>
-
-            <!-- arrivals -->
-            <div class="grid__unit mb-4" id="times">
-                {% include times.html heading="Aankomsttijden" %}
+                {% include times.html %}
             </div>
 
         </div>

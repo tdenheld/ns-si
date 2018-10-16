@@ -79,10 +79,7 @@ $(document).ready(function () {
     function modalities() {
         var modalities = [
             "train",
-            "metro",
-            "tram",
-            "bus",
-            "ferry",
+            "btm"
         ];
 
         var default_state = modalities[0];

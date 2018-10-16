@@ -144,14 +144,9 @@
     display: grid;
     grid-template-columns: repeat(5, max-content);
     margin: 0;
-    padding-bottom: $gutter;
-    grid-gap: $half-gutter;
+    grid-gap: 20px;
     list-style: none;
     color: $ns-blue;
-
-    @include sm {
-        grid-gap: $gutter;
-    }
 }
 
 .times-toggle__item {
