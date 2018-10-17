@@ -25,7 +25,7 @@ table:
     direction: Baarn
     via: Den Dolder, Soest-Zuid, Soest
     platform: '4'
-    alert: true
+    alert: Vertekspoor gewijzigd
     type: "<span class='fw-normal'>Sprinter</span>"
   - time: '20:03'
     direction: Bovenkarspel-Grootebroek
@@ -37,6 +37,7 @@ table:
     via: Utrecht Zuilen, Maarssen
     platform: '5'
     type: "<span class='fw-normal'>Sprinter</span>"
+    delay: "+5"
   - time: '20:11'
     direction: Den Helder
     via: Amsterdam Amstel, Amsterdam Centraal, Alkmaar

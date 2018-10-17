@@ -33,22 +33,37 @@
             <!-- data rows -->
             {% for row in table.rows %}
             <div class="times__row">
-                <div class="times__col times__col--start times__line-150 js-times-col">{{row.time}}</div>
+                <div class="times__col times__col--start times__col--mw50 txt-r js-times-col">
+                    <div class="times__line-150">
+                        {{row.time}}
+                    </div>
+                    {% if row.delay %}
+                    <div class="f14 f-red fw-normal">{{ row.delay }}</div>
+                    {% endif %}
+                </div>
                 <div class="times__col times__col--start js-times-col">
                     <div class="times__line-150">
                         {{row.direction}}
                     </div>
                     <div class="times__via hidden-xs">
-                        <div class="hidden-xs">
+                        <div>
                             {% if table.modality == 'train' %}via {% else %}richting {% endif %}
                             {{row.via}}
                         </div>
                         {% if row.alert %}
-                        <div class="f-red">Dit is een gewijzigd vertrekspoor</div>
+                        <div class="f-red">{{ row.alert }}</div>
                         {% endif %}
                     </div>
-                    <div class="times__via visible-xs">{% if table.modality == 'train' %} {{row.type}}
-                        {% else %} {{row.via}} {% endif %}
+                    <div class="times__via visible-xs">
+                        {% if table.modality == 'train' %}
+                            {{ row.type }}
+                        {% else %}
+                            {{ row.via }}
+                        {% endif %}
+
+                        {% if row.alert %}
+                        <div class="f-red">{{ row.alert }}</div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="times__col times__col--platform {% unless table.modality == 'train' %}times__col--platform--btm{% endunless %} js-times-col">

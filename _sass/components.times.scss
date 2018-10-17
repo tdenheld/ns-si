@@ -79,6 +79,13 @@
         align-self: start;
     }
 
+    &--mw50 {
+        max-width: 38px;
+        @include sm {
+            max-width: 45px;
+        }
+    }
+
     &--platform {
         @include sm {
             width: 45px;
