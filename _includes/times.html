@@ -35,7 +35,7 @@
             <div class="times__row">
                 <div class="times__col times__col--start times__col--mw50 txt-r js-times-col">
                     <div class="times__line-150">
-                        {{row.time}}
+                        {{row.time}} {% if table.modality == 'btm' %} <span class="fw-normal">min</span> {% endif %}
                     </div>
                     {% if row.delay %}
                     <div class="f14 f-red fw-normal">{{ row.delay }}</div>

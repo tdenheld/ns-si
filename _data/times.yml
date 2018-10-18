@@ -47,35 +47,35 @@ table:
 - modality: btm
   cols:
   - label: Lijn
-  - label: Platform
+  - label: Halte
   - label: Vervoerder
   rows:
-  - time: '19:53'
+  - time: '0'
     direction: Bus 2
     via: Centrum
     platform: B2
     type: U-BUS
-  - time: '19:56'
+  - time: '0'
     direction: Tram 6
     via: Oog in Al
     platform: G2
     type: U-BUS
-  - time: '20:05'
+  - time: '1'
     direction: Bus 16
     via: Zuilen
     platform: H5
     type: Syntus
-  - time: '20:10'
+  - time: '1'
     direction: Tram 5
     via: Voordorp
     platform: B2
     type: U-BUS
-  - time: '20:13'
+  - time: '1'
     direction: Bus 7
     via: Kanalen Eiland
     platform: G4
     type: U-BUS
-  - time: '20:16'
+  - time: '2'
     direction: Bus 31
     via: De Uithof
     platform: D2
