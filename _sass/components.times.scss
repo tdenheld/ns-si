@@ -3,7 +3,6 @@
 --------------------*/
 
 .times {
-    overflow: hidden;
     display: grid;
     grid-gap: $gutter;
 
@@ -19,6 +18,7 @@
 }
 
 .times__table {
+    overflow-y: hidden;
     margin-left: -$gutter;
     margin-right: -$gutter;
     @include font-style(14px, bold, 1.4);
