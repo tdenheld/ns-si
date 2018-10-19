@@ -3,6 +3,7 @@
 --------------------*/
 
 .times {
+    overflow: hidden;
     display: grid;
     grid-gap: $gutter;
 
@@ -35,19 +36,11 @@
 
 .times__row {
     padding: $quarter-gutter $gutter;
-    display: grid;
-    grid-template-columns: 56px 5fr 48px;
-    grid-column-gap: $half-gutter;
-    align-items: center;
     background-color: $ns-white;
+    transition: background-color 500ms $ease;
     overflow: hidden;
 
-    @include sm {
-        grid-template-columns: 64px 5fr 1fr 2fr;
-    }
-
     @include md {
-        grid-column-gap: $gutter;
         padding: 10px $half-gutter;
     }
 
@@ -64,6 +57,20 @@
 
     &:nth-child(odd) {
         background-color: $ns-blue-4;
+    }
+}
+
+.times__row-grid {
+    display: grid;
+    grid-template-columns: 56px 5fr 48px;
+    grid-column-gap: $half-gutter;
+    align-items: center;
+
+    @include sm {
+        grid-template-columns: 64px 5fr 1fr 2fr;
+    }
+    @include md {
+        grid-column-gap: $gutter;
     }
 }
 
@@ -137,7 +144,13 @@
 .times--arrivals {
     .times__row {
         &:nth-child(odd) {
-            background-color: mix($ns-yellow, $ns-white, 20%);
+            background-color: mix($ns-yellow, $ns-white, 22%);
+        }
+    }
+
+    .times__clock {
+        .clock {
+            border: 16px solid mix($ns-yellow, $ns-white, 22%);
         }
     }
 }

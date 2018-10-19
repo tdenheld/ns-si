@@ -1,7 +1,9 @@
-<h2 class="headingXL gridHeader__heading">Vertrektijden</h2>
-<a class="gridHeader--link tk-link tk-link--icon">
+<div class="js-times-hc dib">
+    <h2 class="headingXL mr-2 mb-0 js-times-heading">Vertrektijden</h2>
+</div>
+<a class="tk-link tk-link--icon">
     <span include="/assets/img/icons/clock-S--small.svg"></span>
-    Aankomsttijden
+    <span class="js-times-switch">Aankomsttijden</span>
 </a>
 <div class="mb-4"></div>
 
@@ -15,65 +17,71 @@
     {% endfor %}
 </ul>
 
-<div class="times mb-2">
+<div class="times mb-2 js-times">
     <div>
-        <!-- table displaying trains -->
+        <!-- table displaying times -->
         {% for table in site.data.times.table %}
         <div class="times__table js-tm-table js-tm-table__{{table.modality}}">
+
             <!-- top row -->
-            <div class="times__row times__row--top">
-                <div class="times__col js-times-col">
-                    Vertrek
+            <div class="times__row times__row--top js-times-row">
+                <div class="times__row-grid">
+                    <div class="times__col js-times-col js-times-toprow-label">
+                        Vertrek
+                    </div>
+                    {% for col in table.cols %}
+                    <div class="times__col {% if forloop.last %}hidden-xs{% endif %} js-times-col">{{col.label}}</div>
+                    {% endfor %}
                 </div>
-                {% for col in table.cols %}
-                <div class="times__col {% if forloop.last %}hidden-xs{% endif %} js-times-col">{{col.label}}</div>
-                {% endfor %}
             </div>
 
             <!-- data rows -->
             {% for row in table.rows %}
-            <div class="times__row">
-                <div class="times__col times__col--start times__col--mw50 txt-r js-times-col">
-                    <div class="times__line-150">
-                        {{row.time}} {% if table.modality == 'btm' %} <span class="fw-normal">min</span> {% endif %}
-                    </div>
-                    {% if row.delay %}
-                    <div class="f14 f-red fw-normal">{{ row.delay }}</div>
-                    {% endif %}
-                </div>
-                <div class="times__col times__col--start js-times-col">
-                    <div class="times__line-150">
-                        {{row.direction}}
-                    </div>
-                    <div class="times__via hidden-xs">
-                        <div>
-                            {% if table.modality == 'train' %}via {% else %}richting {% endif %}
-                            {{row.via}}
+            <div class="times__row js-times-row">
+                <div class="times__row-grid">
+                    <div class="times__col times__col--start times__col--mw50 txt-r js-times-col">
+                        <div class="times__line-150">
+                            {{row.time}} {% if table.modality == 'btm' %} <span class="fw-normal">min</span> {% endif
+                            %}
                         </div>
-                        {% if row.alert %}
-                        <div class="f-red">{{ row.alert }}</div>
+                        {% if row.delay %}
+                        <div class="f14 f-red fw-normal">{{ row.delay }}</div>
                         {% endif %}
                     </div>
-                    <div class="times__via visible-xs">
-                        {% if table.modality == 'train' %}
+                    <div class="times__col times__col--start js-times-col">
+                        <div class="times__line-150">
+                            {{row.direction}}
+                        </div>
+                        <div class="times__via hidden-xs">
+                            <div>
+                                {% if table.modality == 'train' %}via {% else %}richting {% endif %}
+                                {{row.via}}
+                            </div>
+                            {% if row.alert %}
+                            <div class="f-red"><span class="js-times-alert">Vertrek</span>{{ row.alert }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="times__via visible-xs">
+                            {% if table.modality == 'train' %}
                             {{ row.type }}
-                        {% else %}
+                            {% else %}
                             {{ row.via }}
-                        {% endif %}
+                            {% endif %}
 
-                        {% if row.alert %}
-                        <div class="f-red">{{ row.alert }}</div>
-                        {% endif %}
+                            {% if row.alert %}
+                            <div class="f-red"><span class="js-times-alert">Vertrek</span>{{ row.alert }}</div>
+                            {% endif %}
+                        </div>
                     </div>
-                </div>
-                <div class="times__col times__col--platform {% unless table.modality == 'train' %}times__col--platform--btm{% endunless %} js-times-col">
-                    {{row.platform}}
-                </div>
-                <div class="times__col {% if table.modality == 'train' %} times__col--{{table.modality}} {% endif %} hidden-xs js-times-col">
-                    {% if table.modality == "train" %}
-                    <img src="/assets/img/NS_logo.svg" class="times__logo" />
-                    {% endif %}
-                    {{row.type}}
+                    <div class="times__col times__col--platform {% unless table.modality == 'train' %}times__col--platform--btm{% endunless %} js-times-col">
+                        {{row.platform}}
+                    </div>
+                    <div class="times__col {% if table.modality == 'train' %} times__col--{{table.modality}} {% endif %} hidden-xs js-times-col">
+                        {% if table.modality == "train" %}
+                        <img src="/assets/img/NS_logo.svg" class="times__logo" />
+                        {% endif %}
+                        {{row.type}}
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -83,18 +91,7 @@
 
     <!-- Clock -->
     <div class="times__clock hidden-sm hidden-xs">
-        <div class="clock">
-            <img src="/assets/img/clock/dial.svg" class="clock__img" />
-            <div class="clock__hours-container">
-                <div class="clock__hours"></div>
-            </div>
-            <div class="clock__minutes-container">
-                <div class="clock__minutes"></div>
-            </div>
-            <div class="clock__seconds-container">
-                <div class="clock__seconds"></div>
-            </div>
-        </div>
+        {% include clock.html transition="tr-1000" %}
     </div>
 </div>
 

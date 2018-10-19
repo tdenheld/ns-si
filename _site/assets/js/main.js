@@ -28,7 +28,7 @@ $(document).ready(function () {
     update_window_size();
 
     // update when resizing
-    $(window).resize(function () {
+    $(window).resize(() => {
         update_window_size();
     });
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
     // functionality that"s on linked on scroll
     // ------------------------------------------------------------
 
-    $(window).scroll(function () {
+    $(window).scroll(() => {
         scrolled = true;
         if (scrolled) {
             //requestAnimationFrame(scrolling);
@@ -55,7 +55,7 @@ $(document).ready(function () {
 
     // scroll to
     // ------------------------------------------------------------
-    $("a[href^='#'].js-scroll-to").click(function () {
+    $("a[href^='#'].js-scroll-to").click(() => {
         var obj = {
             element: $($.attr(this, "href")),
             offst: $(".header").height(),
@@ -92,7 +92,7 @@ $(document).ready(function () {
             $(".js-tm-table__" + default_state).show();
             $(".js-tm__" + default_state).addClass("is-active");
 
-            $(b).click(function () {
+            $(b).click(() => {
                 // transition to slide out the current cols of the table
                 TweenMax.set(".js-times-col", {
                     x: -75,
@@ -100,7 +100,7 @@ $(document).ready(function () {
                 });
 
                 // set delay to let the transition fade out the current state
-                setTimeout(function () {
+                setTimeout(() => {
                     // slide in new cols
                     TweenMax.fromTo(".js-times-col", 0.1, {
                         x: 75,
@@ -134,6 +134,86 @@ $(document).ready(function () {
     // init function
     modalities();
 
+
+
+
+
+    // departures arrivals switch
+    // ------------------------------------------------------------------
+    function switch_times() {
+        function motion_text() {
+            TweenMax.fromTo(".js-times-hc", 0.4, {
+                ease: Power3.easeInOut,
+                autoAlpha: 0,
+                rotationX: 50,
+            }, {
+                rotationX: 0,
+                autoAlpha: 1
+            });
+        };
+
+        function stagger_rows() {
+            var tl_a = new TimelineMax();
+            var tl_b = new TimelineMax();
+
+            tl_a.staggerTo(".js-times-row", 0.25, {
+                opacity: 0,
+                ease: Power3.easeInOut,
+                cycle: {
+                    y: function (i) {
+                        return (i * 6);
+                    },
+                },
+            }, 0.02);
+
+            function cons_tl_b() {
+                tl_b.staggerFromTo(".js-times-row", 0.3, {
+                    cycle: {
+                        y: function (i) {
+                            return (i * 6);
+                        },
+                        ease: function (i) {
+                            return Power3.easeInOut;
+                        },
+                    },
+                }, {
+                    opacity: 1,
+                    y: 0,
+                }, 0.02);
+            };
+            TweenLite.delayedCall(0.4, cons_tl_b);
+        };
+
+        var state = [
+            "Vertrektijden",
+            "Aankomsttijden"
+        ];
+        var current_state = state[0];
+
+        $(".js-times-switch").click(() => {
+            $(".js-times").toggleClass("times--arrivals");
+            if (current_state === state[0]) {
+                current_state = state[1];
+                $(".js-times-heading").text(state[1]);
+                $(".js-times-switch").text(state[0]);
+                setTimeout(() => {
+                    $(".js-times-toprow-label").text("Aankomst");
+                    $(".js-times-alert").text("Aankomst");
+                }, 300);
+            } else {
+                current_state = state[0];
+                $(".js-times-heading").text(state[0]);
+                $(".js-times-switch").text(state[1]);
+                setTimeout(() => {
+                    $(".js-times-toprow-label").text("Vertek");
+                    $(".js-times-alert").text("Vertrek");
+                }, 300);
+            };
+            motion_text();
+            stagger_rows();
+        });
+    };
+    switch_times();
 
 
 

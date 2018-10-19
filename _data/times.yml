@@ -25,7 +25,7 @@ table:
     direction: Baarn
     via: Den Dolder, Soest-Zuid, Soest
     platform: '4'
-    alert: Vertekspoor gewijzigd
+    alert: spoor gewijzigd
     type: "<span class='fw-normal'>Sprinter</span>"
   - time: '20:03'
     direction: Bovenkarspel-Grootebroek
