@@ -26,9 +26,18 @@
             <!-- top row -->
             <div class="times__row times__row--top js-times-row">
                 <div class="times__row-grid">
-                    <div class="times__col js-times-col js-times-toprow-label">
+                    <div class="times__col js-times-col js-times-top-col-1">
                         Vertrek
                     </div>
+                    {% if table.modality == 'train' %}
+                    <div class="times__col js-times-col js-times-top-col-2-train">
+                        Naar
+                    </div>
+                    {% else %}
+                    <div class="times__col js-times-col js-times-top-col-2">
+                        Lijn
+                    </div>
+                    {% endif %}
                     {% for col in table.cols %}
                     <div class="times__col {% if forloop.last %}hidden-xs{% endif %} js-times-col">{{col.label}}</div>
                     {% endfor %}

@@ -7,7 +7,6 @@ modality:
 table:
 - modality: train
   cols:
-  - label: Naar
   - label: Spoor
   - label: Trein
   rows:
@@ -46,7 +45,6 @@ table:
 
 - modality: btm
   cols:
-  - label: Lijn
   - label: Halte
   - label: Vervoerder
   rows:
@@ -74,6 +72,8 @@ table:
     direction: Bus 7
     via: Kanalen Eiland
     platform: G4
+    alert: halte gewijzigd
+    delay: "+2"
     type: U-BUS
   - time: '2'
     direction: Bus 31

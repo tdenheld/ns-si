@@ -197,7 +197,8 @@ $(document).ready(function () {
                 $(".js-times-heading").text(state[1]);
                 $(".js-times-switch").text(state[0]);
                 setTimeout(() => {
-                    $(".js-times-toprow-label").text("Aankomst");
+                    $(".js-times-top-col-1").text("Aankomst");
+                    $(".js-times-top-col-2-train").text("Uit");
                     $(".js-times-alert").text("Aankomst");
                 }, 300);
             } else {
@@ -205,7 +206,8 @@ $(document).ready(function () {
                 $(".js-times-heading").text(state[0]);
                 $(".js-times-switch").text(state[1]);
                 setTimeout(() => {
-                    $(".js-times-toprow-label").text("Vertek");
+                    $(".js-times-top-col-1").text("Vertek");
+                    $(".js-times-top-col-2-train").text("Naar");
                     $(".js-times-alert").text("Vertrek");
                 }, 300);
             };
