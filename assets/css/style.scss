@@ -18,10 +18,8 @@
 
 // Components
 @import "components.avt";
-@import "components.animate";
 @import "components.buttons";
 @import "components.links";
-@import "components.transitions";
 @import "components.switch";
 @import "components.times";
 @import "components.clock";
@@ -30,4 +28,6 @@
 @import "templates.app";
 
 // Utilities
-@import "utilities";
+@import "utilities.animate";
+@import "utilities.transitions";
+@import "utilities.tachyons";

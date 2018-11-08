@@ -198,8 +198,9 @@ $(document).ready(function () {
                 $(".js-times-switch").text(state[0]);
                 setTimeout(() => {
                     $(".js-times-top-col-1").text("Aankomst");
-                    $(".js-times-top-col-2-train").text("Uit");
+                    $(".js-times-top-col-2-train").text("Vanuit");
                     $(".js-times-alert").text("Aankomst");
+                    $(".js-times-more").text("Meer aankomsttijden");
                 }, 300);
             } else {
                 current_state = state[0];
@@ -209,6 +210,7 @@ $(document).ready(function () {
                     $(".js-times-top-col-1").text("Vertek");
                     $(".js-times-top-col-2-train").text("Naar");
                     $(".js-times-alert").text("Vertrek");
+                    $(".js-times-more").text("Meer vertrektijden");
                 }, 300);
             };
             motion_text();

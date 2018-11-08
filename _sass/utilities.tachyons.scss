@@ -14,6 +14,12 @@
 
 
 
+// overflows
+// ----------------------------------------------------------------------
+.o-hidden { overflow: hidden; }
+
+
+
 // full fills
 // ----------------------------------------------------------------------
 .full-absolute { @include full(absolute); }
@@ -53,9 +59,25 @@
 	
 	Media Query Extensions:
      -sm = min-width $sm
+     -sm-max = min-width $sm-max (only mobile)
      -md = min-width $md
      -lg = min-width $lg
 */
+
+// auto-margins
+.m-auto {
+    margin: 0 auto;
+}
+@include sm {
+    .m-auto-sm {margin: 0 auto;}     
+}
+@include md {
+    .m-auto-md {margin: 0 auto;}     
+}
+@include lg {
+    .m-auto-lg {margin: 0 auto;}     
+}
+
 @for $i from 0 through 20 {	
 	// margin
 	.ma-#{$i} {	@include spacer($i, margin); }
@@ -73,8 +95,27 @@
 	.pt-#{$i} {	@include spacer($i, padding-top); }
 	.pb-#{$i} {	@include spacer($i, padding-bottom); }
 	.pl-#{$i} {	@include spacer($i, padding-left); }
-	.pr-#{$i} {	@include spacer($i, padding-right); }
-		
+    .pr-#{$i} {	@include spacer($i, padding-right); }
+    
+    @include sm-max {
+        // margin
+        .ma-#{$i}-sm-max {	@include spacer($i, margin); }
+        .mh-#{$i}-sm-max {	@include spacer($i, margin-left); @include spacer($i, margin-right); }
+        .mv-#{$i}-sm-max {	@include spacer($i, margin-top); @include spacer($i, margin-bottom); }
+        .mt-#{$i}-sm-max {	@include spacer($i, margin-top); }
+        .mb-#{$i}-sm-max {	@include spacer($i, margin-bottom); }
+        .ml-#{$i}-sm-max {	@include spacer($i, margin-left); }
+        .mr-#{$i}-sm-max {	@include spacer($i, margin-right); }
+
+        // padding
+        .pa-#{$i}-sm-max {	@include spacer($i, padding); }
+        .ph-#{$i}-sm-max {	@include spacer($i, padding-left); @include spacer($i, padding-right); }
+        .pv-#{$i}-sm-max {	@include spacer($i, padding-top); @include spacer($i, padding-bottom); }
+        .pt-#{$i}-sm-max {	@include spacer($i, padding-top); }
+        .pb-#{$i}-sm-max {	@include spacer($i, padding-bottom); }
+        .pl-#{$i}-sm-max {	@include spacer($i, padding-left); }
+        .pr-#{$i}-sm-max {	@include spacer($i, padding-right); }
+    }		
 	@include sm {
 		// margin
 		.ma-#{$i}-sm {	@include spacer($i, margin); }
@@ -133,7 +174,6 @@
 		.pr-#{$i}-lg {	@include spacer($i, padding-right); }
 	}
 }
-
 
 
 /*-------------------
@@ -211,6 +251,15 @@
 	.w-80-lg {  width:  80%; }
 	.w-90-lg {  width:  90%; }
 	.w-100-lg { width: 100%; }
+}
+
+// max widths
+@for $i from 0 through 32 {
+    $x: $i * 50;
+    $y: $i * 50px;
+    .mxw-#{$x} {
+        max-width: #{$y};
+    }
 }
 
 
@@ -831,6 +880,9 @@
 .bo-l-a15 {border-left: 1px solid $ns-grey-alpha-15;}
 .bo-r-a15 {border-right: 1px solid $ns-grey-alpha-15;}
 
+.bo-b-blue {border-bottom: 1px solid $ns-blue;}
+.bo-b-blue-2px {border-bottom: 2px solid $ns-blue;}
+
 // radius
 // --------------------------------------------
 .br-none {border-radius: none;}
@@ -838,6 +890,7 @@
 .br-8    {border-radius: 8px;}
 .br-12   {border-radius: 12px;}
 .br-16   {border-radius: 16px;}
+.br-pill {border-radius: 100px;}
 .br-50ct {border-radius: 50%;}
 
 
@@ -891,6 +944,7 @@
 
 // fills
 // --------------------------------------------
+.bg-none {background: none;}
 .bg-blue {background-color: $ns-blue;}
 .bg-yellow {background-color: $ns-yellow;}
 .bg-light-blue {background-color: $ns-light-blue;}
@@ -920,6 +974,7 @@
 
 // radial
 .gd-r-yellow {background: radial-gradient(circle at 50% 50%, #FFE48A 0%, $ns-yellow 100%);}
+.gd-r-yellow-subtle {background: radial-gradient(circle at 50% 50%, #FFD342 0%, $ns-yellow 100%);}
 .gd-r70-50-yellow {background: radial-gradient(circle at 70% 50%, #FFE48A 0%, $ns-yellow 100%);}
 .gd-r30-50-yellow {background: radial-gradient(circle at 50% 70%, #FFE48A 0%, $ns-yellow 100%);}
 .gd-r-vivid {background: radial-gradient(circle at 50% 50%, #8ad4e4 0%, #0d6b9e 100%);}

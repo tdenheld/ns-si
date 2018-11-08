@@ -24,9 +24,9 @@
 	animation-timing-function: $ease;
 }
 
-// durations & Delays
+// durations & delays
 // --------------------------------
-@for $i from 1 through 64 {
+@for $i from 0 through 64 {
 	$x: $i * 50;
 	$d: $x * 1ms;
 	
@@ -37,6 +37,25 @@
 		animation-delay: #{$d};
 	}
 }
+
+// staggered
+// --------------------------------
+.a-stag {
+    @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+            animation-duration: (500ms + ($i * 200));
+        }
+    }
+}
+.a-stag-del {
+    @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+            animation-duration: (300ms + ($i * 150));
+            animation-delay: (200ms + ($i * 80));
+        }
+    }
+}
+
 
 
 // animation variants
@@ -118,6 +137,32 @@
 	}
 }
 .a-fi-right {animation-name: fade-in-right;}
+
+@keyframes fade-in-right-small {
+	from {
+		opacity: 0;
+		transform: translate3d(30%, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+.a-fi-right-small {animation-name: fade-in-right-small;}
+
+@keyframes fade-in-right-200px {
+	from {
+		opacity: 0;
+		transform: translate3d(200px, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+.a-fi-right-200px {animation-name: fade-in-right-200px;}
 
 @keyframes scale-in {
 	from {
