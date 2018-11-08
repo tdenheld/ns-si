@@ -1532,24 +1532,52 @@
     </div>
 </header>
     <div class="content">
-        <div class="bg-white">
+        <!-- heading-->
+<div class="gd-r-yellow-subtle pv-2 pv-4-sm">
     <div class="container header__content">
         <div class="grid">
-
-            <!-- heading-->
-            <div class="grid__unit mb-6">
+            <div class="grid__unit">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Stationsinformatie</a></li>
+                    <li class="breadcrumb__item f-blue">
+                        <a class="breadcrumb__link f-blue" href="/">
+                            Stationsinformatie
+                        </a>
+                    </li>
                 </ul>
-                <h1 class="f40 f72-md fw-b lh-solid mb-3">Utrecht Centraal</h1>
-                <a href="https://ns-station.netlify.com/plattegrond.html" class="button btn btn--ghost btn--icon">
+                <h1 class="f40 f56-sm f72-md fw-b lh-solid mb-3">Utrecht Centraal</h1>
+                <a href="https://ns-station.netlify.com/plattegrond.html" class="button btn btn-ghost">
                     <span include="/assets/img/icons/map--small.svg"></span>
                     <span class="ml-5">Bekijk plattegrond</span>
                 </a>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- blue heading -->
+<!-- <div class="bg-blue pv-2 pv-4-sm">
+    <div class="container header__content">
+        <div class="grid">
+            <div class="grid__unit">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item f-white"><a class="breadcrumb__link f-white" href="/">Stationsinformatie</a></li>
+                </ul>
+                <h1 class="f40 f56-sm f72-md fw-b lh-solid mb-3 f-white">Utrecht Centraal</h1>
+                <a href="https://ns-station.netlify.com/plattegrond.html" class="button btn btn-ghost btn-ghost--white">
+                    <span include="/assets/img/icons/map--small.svg"></span>
+                    <span class="ml-5 f-white">Bekijk plattegrond</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="bg-white pv-2 pv-6-sm">
+    <div class="container header__content">
+        <div class="grid">
 
             <!-- departures & arrivals -->
-            <div class="grid__unit mb-4" id="times">
+            <div class="grid__unit mb-6" id="times">
                 <div class="js-times-hc dib">
     <h2 class="headingXL mr-2 mb-0 js-times-heading">Vertrektijden</h2>
 </div>
@@ -2117,7 +2145,7 @@
 
 <a class="iconLink iconLink--scroll-down js-times-more">Meer vertrektijden</a>
             </div>
-            
+
             <!-- interruptions -->
             <div class="grid__unit pb-0" id="interruptions">
     <h2 class="headingXL">Storingen en werkzaamheden</h2>
@@ -2160,7 +2188,7 @@
     </div>
 </div>
 
-<div class="grid__unit s-4-4 m-12-12 l-6-12 mb-2 mb-4-sm">
+<div class="grid__unit s-4-4 m-12-12 l-6-12">
     <a href="#" class="tile tile--compact tile--icon tile--clickable tile--arrowRight bs-none bo-a" data-controller="generic/ui/ContentOpener"
         data-config="{&quot;type&quot;: &quot;Overlay&quot;, &quot;contentId&quot;: &quot;2018_ICE_asd_basel_15okt_17nov&quot;}">
         <div class="tile__title">
@@ -2201,10 +2229,10 @@
         </div>
     </div>
 </div>
-
+<div class="pt-2-sm"></div>
 <rio-si-facilities id="facilities">
-    <div class="container container--header mb-1 mb-3-sm" data-type="cms-FacilitiesTitle">
-        <h2 class="headingXL">Voorzieningen</h2>
+    <div class="container container--header mb-2 mb-3-sm" data-type="cms-FacilitiesTitle">
+        <h2 class="headingXL ovr-heading-not-contained">Voorzieningen</h2>
     </div>
     <div class="container container--section container--article">
         <div class="grid">

@@ -17,3 +17,10 @@
         }
     }
 }
+
+.ovr-heading-not-contained {
+    margin-left: 21px;
+    @include sm {
+        margin-left: 2rem;
+    }
+}
