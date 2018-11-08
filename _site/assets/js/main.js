@@ -55,10 +55,10 @@ $(document).ready(function () {
 
     // scroll to
     // ------------------------------------------------------------
-    $("a[href^='#'].js-scroll-to").click(() => {
+    $("a[href^='#'].js-scroll-to").click(function () {
         var obj = {
             element: $($.attr(this, "href")),
-            offst: $(".header").height(),
+            offst: $(".header").height() + 14,
         };
         TweenMax.to(window, .8, {
             ease: Power3.easeInOut,

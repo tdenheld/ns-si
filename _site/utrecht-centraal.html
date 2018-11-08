@@ -1542,10 +1542,26 @@
                     <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Stationsinformatie</a></li>
                 </ul>
                 <h1 class="f40 f72-md fw-b lh-solid mb-3">Utrecht Centraal</h1>
+
+                <div class="avt-verstoringSummary mt-0 mb-3">
+    <span class="avt-verstoringSummary__item">Op dit moment</span>
+    <span class="avt-verstoringSummary__item avt-verstoringSummary__item--storingen">
+        <span class="icon icon--inline icon--nsRed icon--alert avt-verstoringSummary__icon"></span>
+        <span class="avt-verstoringSummary__counter">1 storing</span>
+    </span>
+    <span class="avt-verstoringSummary__item avt-verstoringSummary__item--werkzaamheden">
+        <span class="icon icon--inline icon--nsRed icon--maintenance avt-verstoringSummary__icon"></span>
+        <span class="avt-verstoringSummary__counter">1 werkzaamheid</span>
+    </span>
+    <a href="#interruptions" class="avt-verstoringSummary__item iconLink iconLink--scroll-down js-scroll-to">Bekijk
+        storingen en werkzaamheden</a>
+</div>
+
                 <a href="https://ns-station.netlify.com/plattegrond.html" class="button btn btn--ghost btn--icon">
                     <span include="/assets/img/icons/map--small.svg"></span>
                     <span class="ml-5">Bekijk plattegrond</span>
                 </a>
+
             </div>
 
             <!-- departures & arrivals -->
@@ -2117,8 +2133,9 @@
 
 <a class="iconLink iconLink--scroll-down">Meer vertrektijden</a>
             </div>
-
-            <div class="grid__unit pb-0">
+            
+            <!-- interruptions -->
+            <div class="grid__unit pb-0" id="interruptions">
     <h2 class="headingXL">Storingen en werkzaamheden</h2>
 </div>
 

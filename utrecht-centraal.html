@@ -13,17 +13,22 @@ hero: g-Hero--major
                     <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">{{ site.data.content.breadcrum }}</a></li>
                 </ul>
                 <h1 class="f40 f72-md fw-b lh-solid mb-3">{{ site.data.content.station }}</h1>
+
+                {% include interruptions-summary.html %}
+
                 <a href="{{ site.data.content.map-button.url }}" class="button btn btn--ghost btn--icon">
                     <span include="/assets/img/icons/map--small.svg"></span>
                     <span class="ml-5">{{ site.data.content.map-button.content }}</span>
                 </a>
+
             </div>
 
             <!-- departures & arrivals -->
             <div class="grid__unit mb-4" id="times">
                 {% include times.html %}
             </div>
-
+            
+            <!-- interruptions -->
             {% include interruptions.html %}
         </div>
     </div>

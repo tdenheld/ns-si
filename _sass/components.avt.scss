@@ -1,0 +1,272 @@
+/*
+// we create a list of the names colors, so we can check the existence of every color when we createIconBg();
+$ns-icon-colornames:('');
+@each $color, $colorcode in $ns-icon-colors {
+    $ns-icon-colornames: append($ns-icon-colorcodes, $color) !global;
+}
+
+ */
+/*
+ *  Calculates the number of rem/em units based on the input pixel count.
+ *  Allows a fallback to px units later on (say for IE8 support)
+ */
+/*
+ *  Casts a value (ie a list or a map) to a function.
+ *  Handy to convert a classList in an array to a selector.
+ */
+/*
+ *  Converts a string from camelCase to kebab-case.
+ *  Useful to convert from our camelCase class naming convention
+ *  to our file naming convention (kebab-case).
+ *
+ *  ps. https://www.facebook.com/events/428725190650862/
+ */
+/*
+ * Converts a string from kebab-case to camelCase.
+ * Useful to convert a string file-naming-convention to classNamingConvention.
+ */
+/*
+ *  borrowed from https://github.com/hail2u/scss-functions/blob/master/string/_str-replace.scss
+ */
+/*
+ * Apply hover styling which is optimized for mobile by applying the same styling
+ * to the :active pseudo-selector instead when the user has been detected to use
+ * touch interaction.
+ *
+ * A javascript works together with this mixin to detect mouse and touch input from
+ * the user, thereby also supporting laptop and tablets which support both types
+ * of input.
+ */
+/*
+
+Some styles will need to live in generic, but also be extendible in the seperate apps.
+TODO: find out if this 'logic' will make sense, or if we need another solution
+
+@author: Henk Jan Bouwmeester
+@added:  2014-09-10
+
+*/
+/* -----------  Generic header styles */
+/*
+ * Create a default icon classes for $iconName and $colorName.
+ *
+ * Will output the standard selector set for your icon.
+ */
+@media screen {
+  .printOnly {
+    display: none !important;
+  }
+}
+
+@media print {
+  .screenOnly {
+    display: none !important;
+  }
+}
+
+.avt_table {
+  margin-bottom: 1.875rem;
+  position: relative;
+  width: 100%;
+}
+.avt_table th {
+  text-align: left;
+  padding: 0 0 1rem 0;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 640px) {
+  .avt_table th {
+    padding: 0 0 1rem 0;
+  }
+}
+.avt_table td {
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 2rem 0.5rem 0 0;
+}
+@media screen and (min-width: 640px) {
+  .avt_table td {
+    padding: 2rem 0.5rem 0 0;
+  }
+}
+.avt_table tbody tr:nth-child(1) td {
+  padding-top: 1rem;
+}
+.avt_table:after {
+  width: 100%;
+  height: 0.125rem;
+  background: #ffc917;
+  content: "";
+  position: absolute;
+  top: 2.3125rem;
+  left: 0;
+}
+
+.avt_cancelled .avt__depart,
+.avt_cancelled .avt__destination,
+.avt_cancelled .avt__carrier {
+  color: #9c9ca6;
+}
+
+.avt__departHeader,
+.avt__depart {
+  width: 4.0625rem;
+}
+@media screen and (min-width: 640px) {
+  .avt__departHeader,
+  .avt__depart {
+    width: 7.5rem;
+  }
+}
+@media screen and (min-width: 912px) {
+  .avt__departHeader,
+  .avt__depart {
+    width: 9.375rem;
+  }
+}
+
+.avt_table .avt__destinationHeader,
+.avt_table .avt__destination {
+  padding-right: 1rem;
+}
+@media screen and (min-width: 640px) {
+  .avt_table .avt__destinationHeader,
+  .avt_table .avt__destination {
+    padding-right: 2rem;
+  }
+}
+@media screen and (min-width: 912px) {
+  .avt_table .avt__destinationHeader,
+  .avt_table .avt__destination {
+    padding-right: 4rem;
+  }
+}
+
+.avt__carrierHeader,
+.avt__carrier {
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  .avt__carrierHeader,
+  .avt__carrier {
+    display: table-cell;
+    width: 9.375rem;
+  }
+}
+@media screen and (min-width: 912px) {
+  .avt__carrierHeader,
+  .avt__carrier {
+    display: table-cell;
+    width: 11.25rem;
+  }
+}
+
+.avt_table .avt__platformHeader,
+.avt_table .avt__platform {
+  width: 2.8125rem;
+  text-align: right;
+  padding-right: 0;
+}
+
+.avt__depart,
+.avt__destination {
+  color: #003082;
+  font-weight: bold;
+}
+
+.avt__alert, .avt__delay {
+  color: #db0029;
+  font-weight: normal;
+}
+
+.avt__delay {
+  padding-left: 0;
+  display: block;
+}
+@media screen and (min-width: 640px) {
+  .avt__delay {
+    display: inline-block;
+    padding-left: 0.375rem;
+  }
+}
+
+.avt__message {
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #9c9ca6;
+  margin-bottom: 0;
+  line-height: 1.25rem;
+}
+
+.avt__message--alert {
+  color: #db0029;
+}
+
+.formSubstitute {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.searchForm__field input::-ms-clear {
+  display: none;
+}
+
+.autosuggest__list {
+  z-index: 200 !important;
+}
+
+.avt-verstoringSummary {
+  color: #003082;
+  margin-top: 15px;
+  margin-bottom: -10px;
+}
+.avt-verstoringSummary:before, .avt-verstoringSummary:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.avt-verstoringSummary:after {
+  clear: both;
+}
+.avt-verstoringSummary__item {
+  float: left;
+  clear: left;
+  margin: 0 0 5px 0;
+  height: 25px;
+}
+@media screen and (min-width: 640px) {
+  .avt-verstoringSummary__item {
+    clear: none;
+    margin-right: 21px;
+  }
+}
+@media screen and (min-width: 912px) {
+  .avt-verstoringSummary__item {
+    margin-bottom: 0;
+  }
+}
+.avt-verstoringSummary__item--werkzaamheden {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 912px) {
+  .avt-verstoringSummary__item--werkzaamheden {
+    margin-bottom: 0;
+  }
+}
+.avt-verstoringSummary__item--link {
+  clear: left;
+  font-weight: normal;
+  margin-left: 0.125rem;
+  /* offset om icoon mooi uit te laten lijnen met icons er boven, niet uit variable verkrijgbaar */
+}
+@media screen and (min-width: 912px) {
+  .avt-verstoringSummary__item--link {
+    clear: none;
+  }
+}
+.avt-verstoringSummary__icon {
+  vertical-align: middle;
+}
