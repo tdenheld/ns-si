@@ -4,3 +4,25 @@ station: Utrecht Centraal
 map-button:
   url: "https://ns-station.netlify.com/plattegrond.html"
   content: Bekijk plattegrond
+
+nav:
+- link:
+    href: "#times"
+    class: js-scroll-to	
+  icon: clock--large
+  title: Vetrektijden
+- link:
+    href: "#interruptions"
+    class: js-scroll-to	
+  icon: alert--large
+  title: Storingen
+- link:
+    href: "#facilities"
+    class: js-scroll-to	
+  icon: bike-shed-year--large
+  title: Voorzieningen
+- link:
+    href: "https://ns-station.netlify.com/plattegrond.html"
+    class: ""	
+  icon: map--large
+  title: Plattegrond

@@ -8,7 +8,7 @@
     display: grid;
     grid-column-gap: $half-gutter;
     grid-row-gap: $one-half-gutter;
-    grid-template-columns: repeat(3, 1fr);	
+    grid-template-columns: repeat(2, 1fr);
 
     @include md {
         grid-gap: $double-gutter;
@@ -16,14 +16,14 @@
     }
 
     svg {
-		fill: $ns-light-blue;
+		fill: $ns-blue;
 		transition: $fade-all;
 	}
 }				
 
 .nav__item {
     display: grid;
-    grid-gap: $quarter-gutter;
+    grid-gap: 5px;
     justify-content: center;
     transition: $fade-all;
     cursor: pointer;
@@ -31,6 +31,7 @@
     &:hover {
         > .nav__title {
             color: $ns-blue;
+            box-shadow: 0 1px 0 $ns-blue;
         }
         
         svg {
@@ -55,13 +56,7 @@
 
 .nav__title {
     margin: 0;
-    font-size: 14px;
-    line-height: 20px;
-    color: $ns-light-blue;
-    transition: $fade-all;
-
-    @include sm {
-        font-size: 16px;
-        line-height: 25px;
-    }				
+    @include font-style(16px, normal, 1.5);
+    color: $ns-blue;
+    transition: $fade-all;			
 }

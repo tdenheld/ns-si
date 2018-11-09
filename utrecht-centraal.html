@@ -6,43 +6,31 @@ hero: g-Hero--major
 <!-- heading-->
 <div class="gd-r-yellow-subtle pv-2 pv-4-sm">
     <div class="container header__content">
-        <div class="grid">
-            <div class="grid__unit">
-                <ul class="breadcrumb">
-                    <li class="breadcrumb__item f-blue">
-                        <a class="breadcrumb__link f-blue" href="/">
-                            {{ site.data.content.breadcrum }}
-                        </a>
-                    </li>
-                </ul>
-                <h1 class="f40 f56-sm f72-md fw-b lh-solid mb-3">{{ site.data.content.station }}</h1>
-                <a href="{{ site.data.content.map-button.url }}" class="button btn btn-ghost">
-                    <span include="/assets/img/icons/map--small.svg"></span>
-                    <span class="ml-5">{{ site.data.content.map-button.content }}</span>
+        <div class="w-100">
+            <ul class="breadcrumb">
+                <li class="breadcrumb__item f-blue">
+                    <a class="breadcrumb__link f-blue" href="/">
+                        {{ site.data.content.breadcrum }}
+                    </a>
+                </li>
+            </ul>
+            <h1 class="f40 f56-sm f72-md fw-b lh-solid mb-3">{{ site.data.content.station }}</h1>
+            <div class="bo-b-blue mb-4"></div>
+            
+            <!-- app navigation -->
+            <div class="nav">
+                {% for item in site.data.content.nav %}
+                <a href="{{item.link.href}}" class="nav__link {{item.link.class}}">
+                    <div class="nav__item">
+                        <span class="nav__icon" include="/assets/img/icons/{{item.icon}}.svg"></span>
+                        <h3 class="nav__title">{{item.title}}</h3>
+                    </div>
                 </a>
+                {% endfor %}
             </div>
         </div>
     </div>
 </div>
-
-<!-- blue heading -->
-<!-- <div class="bg-blue pv-2 pv-4-sm">
-    <div class="container header__content">
-        <div class="grid">
-            <div class="grid__unit">
-                <ul class="breadcrumb">
-                    <li class="breadcrumb__item f-white"><a class="breadcrumb__link f-white" href="/">{{
-                            site.data.content.breadcrum }}</a></li>
-                </ul>
-                <h1 class="f40 f56-sm f72-md fw-b lh-solid mb-3 f-white">{{ site.data.content.station }}</h1>
-                <a href="{{ site.data.content.map-button.url }}" class="button btn btn-ghost btn-ghost--white">
-                    <span include="/assets/img/icons/map--small.svg"></span>
-                    <span class="ml-5 f-white">{{ site.data.content.map-button.content }}</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div> -->
 
 <div class="bg-white pv-2 pv-6-sm">
     <div class="container header__content">
