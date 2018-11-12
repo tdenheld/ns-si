@@ -48,14 +48,19 @@
             {% for row in table.rows %}
             <div class="times__row js-times-row">
                 <div class="times__row-grid">
-                    <div class="times__col times__col--start times__col--mw50 txt-r js-times-col">
-                        <div class="times__line-150">
-                            {{row.time}} {% if table.modality == 'btm' %} <span class="fw-normal">min</span> {% endif
-                            %}
+                    <div class="times__col times__col--start js-times-col">
+                        <div class="times__time-container">
+                            <div class="times__line-150">
+                                {{row.time}}
+                                {% if table.modality == 'btm' %} <span class="fw-normal">min</span>
+                                {% endif %}
+                            </div>
+                            {% if row.delay %}
+                            <div class="f14 f-red fw-normal txt-r">
+                                {{ row.delay }}
+                            </div>
+                            {% endif %}
                         </div>
-                        {% if row.delay %}
-                        <div class="f14 f-red fw-normal">{{ row.delay }}</div>
-                        {% endif %}
                     </div>
                     <div class="times__col times__col--start js-times-col">
                         <div class="times__line-150">

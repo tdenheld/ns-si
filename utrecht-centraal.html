@@ -4,7 +4,7 @@ hero: g-Hero--major
 ---
 
 <!-- heading-->
-<div class="gd-r-yellow-subtle pv-2 pv-4-sm">
+<!-- <div class="gd-r-yellow-subtle pv-2 pv-4-sm">
     <div class="container header__content">
         <div class="w-100">
             <ul class="breadcrumb">
@@ -16,8 +16,6 @@ hero: g-Hero--major
             </ul>
             <h1 class="f40 f56-sm f72-md fw-b lh-solid mb-3">{{ site.data.content.station }}</h1>
             <div class="bo-b-blue mb-4"></div>
-            
-            <!-- app navigation -->
             <div class="nav">
                 {% for item in site.data.content.nav %}
                 <a href="{{item.link.href}}" class="nav__link {{item.link.class}}">
@@ -27,6 +25,27 @@ hero: g-Hero--major
                     </div>
                 </a>
                 {% endfor %}
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="gd-r-yellow-subtle pv-2 pv-4-sm">
+    <div class="container header__content">
+        <div class="grid">
+            <div class="grid__unit">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item f-blue">
+                        <a class="breadcrumb__link f-blue" href="/">
+                            {{ site.data.content.breadcrum }}
+                        </a>
+                    </li>
+                </ul>
+                <h1 class="f40 f56-sm f72-md fw-b lh-solid mb-3">{{ site.data.content.station }}</h1>
+                <a href="{{ site.data.content.map-button.url }}" class="button btn btn-ghost">
+                    <span include="/assets/img/icons/map--small.svg"></span>
+                    <span class="ml-5">{{ site.data.content.map-button.content }}</span>
+                </a>
             </div>
         </div>
     </div>

@@ -86,13 +86,6 @@
         align-self: start;
     }
 
-    &--mw50 {
-        max-width: 38px;
-        @include sm {
-            max-width: 45px;
-        }
-    }
-
     &--platform {
         @include sm {
             width: 45px;
@@ -138,6 +131,13 @@
 
     @include md {
         max-width: none;
+    }
+}
+
+.times__time-container {
+    max-width: 36px;
+    @include sm {
+        max-width: 41px;
     }
 }
 
