@@ -1,11 +1,10 @@
 ---
-title: Amsterdam Centraal
-station-code: asd
+layout: default
 ---
 
-<!-- heading-->
+<!-- hero -->
 <div class="tk-hero">
-    <div class="tk-hero__bg tk-hero__bg--{{page.station-code}}"></div>
+    <div class="tk-hero__bg tk-hero__bg--{{ page.station-code }}"></div>
     <div class="tk-hero__gradient"></div>
     <div class="tk-hero__content">
         <div class="container header__content db">
@@ -21,13 +20,14 @@ station-code: asd
     </div>
 </div>
 
+<!-- in-app navigation -->
 <div class="bg-white">
     <div class="container header__content db pv-4">
         <div class="nav">
             {% for item in site.data.content.nav %}
-            <a href="{{item.link.href}}" class="nav__link {{item.link.class}}">
+            <a href="{{ item.link.href }}" class="nav__link {{ item.link.class }}">
                 <div class="nav__item">
-                    <span class="nav__icon" include="/assets/img/icons/{{item.icon}}.svg"></span>
+                    <span class="nav__icon" include="/assets/img/icons/{{ item.icon }}.svg"></span>
                     <span class="nav__title">{{item.title}}<span>
                 </div>
             </a>
@@ -36,6 +36,7 @@ station-code: asd
     </div>
 </div>
 
+<!-- travel info -->
 <div class="bg-white pv-2 pv-6-sm">
     <div class="container header__content">
         <div class="grid">
@@ -50,5 +51,6 @@ station-code: asd
         </div>
     </div>
 </div>
-<div class="pt-2-sm"></div>
+
+<!-- station facilities -->
 {% include facilities.html %}

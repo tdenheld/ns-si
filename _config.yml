@@ -3,6 +3,10 @@ sass:
 
 defaults:
   - scope:
+      path: "stations"
+    values:
+      layout: "station"
+  - scope:
       path: ""
     values:
       layout: "default"

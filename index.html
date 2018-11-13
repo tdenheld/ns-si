@@ -1,9 +1,19 @@
 ---
 title: Stationsinformatie
+station-code: gv
 ---
 
+<!-- hero -->
+<div class="container container--extended">
+    <div class="g-Hero">
+        <picture class="">
+            <source srcset="/assets/img/heros/hero-{{ page.station-code }}.jpg" />
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" class="img--contain">
+        </picture>
+    </div>
+</div>
 
-{% include hero.html hero="hero-gv.jpg" %}
+<!-- heading -->
 <div class="container container--section">
     <div class="grid">
         <div class="grid__unit s-4-4 m-12-12 l-8-12">
@@ -35,4 +45,6 @@ title: Stationsinformatie
         </div>
     </div>
 </div>
+
+<!-- link list of stations -->
 {% include direct-links.html %}
