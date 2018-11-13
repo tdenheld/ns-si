@@ -722,7 +722,7 @@
 // font colors
 // ----------------------------------------------------------------------
 .f-blue {color: $ns-grey;}
-.f-white {color: $ns-white;}
+.f-white {color: $ns-white; &:hover{color: $ns-white;}}
 .f-yellow {color: $ns-yellow;}
 .f-blue {color: $ns-blue;}
 .f-light-blue {color: $ns-light-blue;}

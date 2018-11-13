@@ -1,6 +1,4 @@
 breadcrum: Stationsinformatie
-type: Station
-station: Utrecht Centraal
 map-button:
   url: "https://ns-station.netlify.com/plattegrond.html"
   content: Bekijk plattegrond

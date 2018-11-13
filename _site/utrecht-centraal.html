@@ -1533,70 +1533,55 @@
 </header>
     <div class="content">
         <!-- heading-->
-<!-- <div class="gd-r-yellow-subtle pv-2 pv-4-sm">
-    <div class="container header__content">
-        <div class="w-100">
-            <ul class="breadcrumb">
-                <li class="breadcrumb__item f-blue">
-                    <a class="breadcrumb__link f-blue" href="/">
+<div class="tk-hero">
+    <div class="tk-hero__bg tk-hero__bg--ut"></div>
+    <div class="tk-hero__gradient"></div>
+    <div class="tk-hero__content">
+        <div class="container header__content db">
+            <ul class="breadcrumb mb-0">
+                <li class="breadcrumb__item f-white ts-2">
+                    <a class="breadcrumb__link f-white ts-2" href="/">
                         Stationsinformatie
                     </a>
                 </li>
             </ul>
-            <h1 class="f40 f56-sm f72-md fw-b lh-solid mb-3">Utrecht Centraal</h1>
-            <div class="bo-b-blue mb-4"></div>
-            <div class="nav">
-                
-                <a href="#times" class="nav__link js-scroll-to">
-                    <div class="nav__item">
-                        <span class="nav__icon" include="/assets/img/icons/clock--large.svg"></span>
-                        <h3 class="nav__title">Vetrektijden</h3>
-                    </div>
-                </a>
-                
-                <a href="#interruptions" class="nav__link js-scroll-to">
-                    <div class="nav__item">
-                        <span class="nav__icon" include="/assets/img/icons/alert--large.svg"></span>
-                        <h3 class="nav__title">Storingen</h3>
-                    </div>
-                </a>
-                
-                <a href="#facilities" class="nav__link js-scroll-to">
-                    <div class="nav__item">
-                        <span class="nav__icon" include="/assets/img/icons/bike-shed-year--large.svg"></span>
-                        <h3 class="nav__title">Voorzieningen</h3>
-                    </div>
-                </a>
-                
-                <a href="https://ns-station.netlify.com/plattegrond.html" class="nav__link ">
-                    <div class="nav__item">
-                        <span class="nav__icon" include="/assets/img/icons/map--large.svg"></span>
-                        <h3 class="nav__title">Plattegrond</h3>
-                    </div>
-                </a>
-                
-            </div>
+            <h1 class="tk-heading-xxl tk-hero__heading">Utrecht Centraal</h1>
         </div>
     </div>
-</div> -->
+</div>
 
-<div class="gd-r-yellow-subtle pv-2 pv-4-sm">
-    <div class="container header__content">
-        <div class="grid">
-            <div class="grid__unit">
-                <ul class="breadcrumb">
-                    <li class="breadcrumb__item f-blue">
-                        <a class="breadcrumb__link f-blue" href="/">
-                            Stationsinformatie
-                        </a>
-                    </li>
-                </ul>
-                <h1 class="f40 f56-sm f72-md fw-b lh-solid mb-3">Utrecht Centraal</h1>
-                <a href="https://ns-station.netlify.com/plattegrond.html" class="button btn btn-ghost">
-                    <span include="/assets/img/icons/map--small.svg"></span>
-                    <span class="ml-5">Bekijk plattegrond</span>
-                </a>
-            </div>
+<div class="bg-white">
+    <div class="container header__content db pv-4">
+        <div class="nav">
+            
+            <a href="#times" class="nav__link js-scroll-to">
+                <div class="nav__item">
+                    <span class="nav__icon" include="/assets/img/icons/clock--large.svg"></span>
+                    <span class="nav__title">Vetrektijden<span>
+                </div>
+            </a>
+            
+            <a href="#interruptions" class="nav__link js-scroll-to">
+                <div class="nav__item">
+                    <span class="nav__icon" include="/assets/img/icons/alert--large.svg"></span>
+                    <span class="nav__title">Storingen<span>
+                </div>
+            </a>
+            
+            <a href="#facilities" class="nav__link js-scroll-to">
+                <div class="nav__item">
+                    <span class="nav__icon" include="/assets/img/icons/bike-shed-year--large.svg"></span>
+                    <span class="nav__title">Voorzieningen<span>
+                </div>
+            </a>
+            
+            <a href="https://ns-station.netlify.com/plattegrond.html" class="nav__link ">
+                <div class="nav__item">
+                    <span class="nav__icon" include="/assets/img/icons/map--large.svg"></span>
+                    <span class="nav__title">Plattegrond<span>
+                </div>
+            </a>
+            
         </div>
     </div>
 </div>
@@ -1608,7 +1593,7 @@
             <!-- departures & arrivals -->
             <div class="grid__unit mb-6" id="times">
                 <div class="js-times-hc dib">
-    <h2 class="headingXL mr-2 mb-0 js-times-heading">Vertrektijden</h2>
+    <h2 class="tk-heading-xl mr-2 mb-0 js-times-heading">Vertrektijden</h2>
 </div>
 <a class="tk-link tk-link--icon">
     <span include="/assets/img/icons/clock-S--small.svg"></span>
@@ -1620,12 +1605,12 @@
 <ul class="times-toggle mb-3">
     
     <li class="times-toggle__item js-tm js-tm__train">
-        <h3 class="times-toggle__title">Trein</h3>
+        <div class="times-toggle__title">Trein</div>
         <div class="times-toggle__line"></div>
     </li>
     
     <li class="times-toggle__item js-tm js-tm__btm">
-        <h3 class="times-toggle__title">Bus en Tram</h3>
+        <div class="times-toggle__title">Bus en Tram</div>
         <div class="times-toggle__line"></div>
     </li>
     
@@ -2223,7 +2208,7 @@
 
             <!-- interruptions -->
             <div class="grid__unit pb-0" id="interruptions">
-    <h2 class="headingXL">Storingen en werkzaamheden</h2>
+    <h2 class="tk-heading-xl">Storingen en werkzaamheden</h2>
 </div>
 
 <div class="grid__unit s-4-4 m-12-12 l-6-12">
@@ -2307,7 +2292,7 @@
 <div class="pt-2-sm"></div>
 <rio-si-facilities id="facilities">
     <div class="container container--header mb-2 mb-3-sm" data-type="cms-FacilitiesTitle">
-        <h2 class="headingXL ovr-heading-not-contained">Voorzieningen</h2>
+        <h2 class="tk-heading-xl ovr-heading-not-contained">Voorzieningen</h2>
     </div>
     <div class="container container--section container--article">
         <div class="grid">
@@ -2316,7 +2301,7 @@
                     <!---->
                     <div class="columnizer__block">
                         <rio-si-category>
-                            <h3>Services</h3>
+                            <h3 class="fw-b">Services</h3>
                             <ul class="greyBullets">
                                 <!---->
                                 <li class="list__item">
@@ -2426,7 +2411,7 @@
                     </div>
                     <div class="columnizer__block">
                         <rio-si-category>
-                            <h3>Winkelen</h3>
+                            <h3 class="fw-b">Winkelen</h3>
                             <ul class="greyBullets">
                                 <!---->
                                 <li class="list__item">
@@ -2495,7 +2480,7 @@
                     </div>
                     <div class="columnizer__block">
                         <rio-si-category>
-                            <h3>Eten &amp; Drinken</h3>
+                            <h3 class="fw-b">Eten &amp; Drinken</h3>
                             <ul class="greyBullets">
                                 <!---->
                                 <li class="list__item">
@@ -2619,7 +2604,7 @@
                     </div>
                     <div class="columnizer__block">
                         <rio-si-category>
-                            <h3>Informatie mindervaliden</h3>
+                            <h3 class="fw-b">Informatie mindervaliden</h3>
                             <ul class="greyBullets">
                                 <!---->
                                 <li class="list__item">

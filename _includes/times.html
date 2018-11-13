@@ -1,5 +1,5 @@
 <div class="js-times-hc dib">
-    <h2 class="headingXL mr-2 mb-0 js-times-heading">Vertrektijden</h2>
+    <h2 class="tk-heading-xl mr-2 mb-0 js-times-heading">Vertrektijden</h2>
 </div>
 <a class="tk-link tk-link--icon">
     <span include="/assets/img/icons/clock-S--small.svg"></span>
@@ -11,7 +11,7 @@
 <ul class="times-toggle mb-3">
     {% for item in site.data.times.modality %}
     <li class="times-toggle__item js-tm js-tm__{{item.class}}">
-        <h3 class="times-toggle__title">{{item.title}}</h3>
+        <div class="times-toggle__title">{{item.title}}</div>
         <div class="times-toggle__line"></div>
     </li>
     {% endfor %}
