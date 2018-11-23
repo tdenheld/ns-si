@@ -55,6 +55,13 @@
         }
     }
 
+    &--day {
+        padding-top: 14px;
+        padding-bottom: 3px;
+        @include font-style(14px, normal, 1.4);
+        color: $ns-grey-4;
+    }
+
     &:nth-child(odd) {
         background-color: $ns-blue-4;
     }

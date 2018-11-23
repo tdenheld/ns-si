@@ -1,0 +1,34 @@
+modality:
+- class: train
+  title: Trein
+
+table:
+- modality: train
+  cols:
+  - label: Spoor
+  - label: Trein
+  rows:
+  - time: "11:51"
+    direction: Groningen
+    day: Vandaag
+    via: "Uithuizermeeden, Warffum, Sauwerd"
+    platform: 1
+    type: "Arriva Stoptrein"
+  - time: "11:51"
+    direction: Groningen
+    day: Morgen
+    via: "Uithuizermeeden, Warffum, Sauwerd"
+    platform: 1
+    type: "Arriva Stoptrein"
+  - time: "11:51"
+    direction: Groningen
+    day: Zondag 25 november
+    via: "Uithuizermeeden, Warffum, Sauwerd"
+    platform: 1
+    type: "Arriva Stoptrein"
+  - time: "11:51"
+    direction: Groningen
+    day: Maandag 26 november
+    via: "Uithuizermeeden, Warffum, Sauwerd"
+    platform: 1
+    type: "Arriva Stoptrein"
