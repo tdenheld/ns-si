@@ -32,7 +32,7 @@
                     </div>
                     {% if table.modality == 'train' %}
                     <div class="times__col js-times-col js-times-top-col-2-train">
-                        Naar
+                        Naar / Opmerkingen
                     </div>
                     {% else %}
                     <div class="times__col js-times-col js-times-top-col-2">
@@ -67,21 +67,18 @@
                         <div class="times__line-150">
                             {{row.direction}}
                         </div>
-                        <div class="times__via hidden-xs">
-                            <div>
+                        <div class="times__via">
+                            <div class="hidden-xs">
                                 {% if table.modality == 'train' %}via {% else %}richting {% endif %}
                                 {{row.via}}
                             </div>
-                            {% if row.alert %}
-                            <div class="f-red"><span class="js-times-alert">Vertrek</span>{{ row.alert }}</div>
-                            {% endif %}
-                        </div>
-                        <div class="times__via visible-xs">
-                            {% if table.modality == 'train' %}
-                            {{ row.type }}
-                            {% else %}
-                            {{ row.via }}
-                            {% endif %}
+                            <div class="visible-xs">
+                                {% if table.modality == 'train' %}
+                                {{ row.type }}
+                                {% else %}
+                                {{ row.via }}
+                                {% endif %}
+                            </div>
 
                             {% if row.alert %}
                             <div class="f-red"><span class="js-times-alert">Vertrek</span>{{ row.alert }}</div>

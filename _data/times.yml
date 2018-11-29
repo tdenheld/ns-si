@@ -14,23 +14,23 @@ table:
     direction: Maastricht
     via: "'s-Hertogenbosch, Eindhoven, Weert, Roermond"
     platform: 18b
-    type: "<i>Intercity</i>"
+    type: "Intercity"
   - time: '19:56'
     direction: Rotterdam Centraal
     via: Gouda, Rotterdam Alexander
     platform: 8a
-    type: "<i>Intercity</i>"
+    type: "Intercity"
   - time: '20:01'
     direction: Baarn
     via: Den Dolder, Soest-Zuid, Soest
-    platform: '4'
-    alert: spoor gewijzigd
+    platform: '5b'
+    alert: spoor gewijzigd naar 5b
     type: "<span class='fw-normal'>Sprinter</span>"
   - time: '20:03'
     direction: Bovenkarspel-Grootebroek
     via: Amersfoort, Apeldoorn, Deventer, Hengelo
     platform: '14'
-    type: "<i>Intercity</i>"
+    type: "Intercity"
   - time: '20:06'
     direction: Breukelen
     via: Utrecht Zuilen, Maarssen
@@ -41,7 +41,7 @@ table:
     direction: Den Helder
     via: Amsterdam Amstel, Amsterdam Centraal, Alkmaar
     platform: 7b
-    type: "<i>Intercity</i>"
+    type: "Intercity"
 
 - modality: btm
   cols:
@@ -72,7 +72,7 @@ table:
     direction: Bus 7
     via: Kanalen Eiland
     platform: G4
-    alert: halte gewijzigd
+    alert: halte gewijzigd naar G4
     delay: "+2"
     type: U-BUS
   - time: '2'

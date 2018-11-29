@@ -21,7 +21,7 @@
                         Vertrek
                     </div>
                     <div class="times__col js-times-col js-times-top-col-2-train">
-                        Naar
+                        Naar / Opmerkingen
                     </div>
                     {% for col in table.cols %}
                     <div class="times__col {% if forloop.last %}hidden-xs{% endif %} js-times-col">{{col.label}}</div>
@@ -31,7 +31,7 @@
 
             <!-- data rows -->
             {% for row in table.rows %}
-            <div class="times__row times__row--day">{{ row.day }}</div>
+            <div class="times__row times__row--day js-times-row">{{ row.day }}</div>
             <div class="times__row js-times-row">
                 <div class="times__row-grid">
                     <div class="times__col times__col--start js-times-col">
@@ -50,16 +50,13 @@
                         <div class="times__line-150">
                             {{row.direction}}
                         </div>
-                        <div class="times__via hidden-xs">
-                            <div>
+                        <div class="times__via">
+                            <div class="hidden-xs">
                                 via {{row.via}}
                             </div>
-                            {% if row.alert %}
-                            <div class="f-red"><span class="js-times-alert">Vertrek</span>{{ row.alert }}</div>
-                            {% endif %}
-                        </div>
-                        <div class="times__via visible-xs">
-                            {{ row.type }}
+                            <div class="visible-xs">
+                                {{ row.type }}
+                            </div>
                             {% if row.alert %}
                             <div class="f-red"><span class="js-times-alert">Vertrek</span>{{ row.alert }}</div>
                             {% endif %}
