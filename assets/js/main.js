@@ -199,7 +199,7 @@ $(document).ready(function () {
                 setTimeout(() => {
                     $(".js-times-top-col-1").text("Aankomst");
                     $(".js-times-top-col-2-train").text("Vanuit");
-                    $(".js-times-alert").text("Aankomst");
+                    $(".js-times-alert").text("aankomst");
                     $(".js-times-more").text("Meer aankomsttijden");
                 }, 300);
             } else {
@@ -209,7 +209,7 @@ $(document).ready(function () {
                 setTimeout(() => {
                     $(".js-times-top-col-1").text("Vertek");
                     $(".js-times-top-col-2-train").text("Naar");
-                    $(".js-times-alert").text("Vertrek");
+                    $(".js-times-alert").text("vertrek");
                     $(".js-times-more").text("Meer vertrektijden");
                 }, 300);
             };

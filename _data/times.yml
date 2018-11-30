@@ -24,7 +24,7 @@ table:
     direction: Baarn
     via: Den Dolder, Soest-Zuid, Soest
     platform: '5b'
-    alert: spoor gewijzigd naar 5b
+    alert: spoor
     type: "<span class='fw-normal'>Sprinter</span>"
   - time: '20:03'
     direction: Bovenkarspel-Grootebroek
@@ -72,7 +72,7 @@ table:
     direction: Bus 7
     via: Kanalen Eiland
     platform: G4
-    alert: halte gewijzigd naar G4
+    alert: halte
     delay: "+2"
     type: U-BUS
   - time: '2'
