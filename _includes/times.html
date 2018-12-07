@@ -87,7 +87,7 @@
                         </div>
                     </div>
                     <div class="times__col times__col--platform {% unless table.modality == 'train' %}times__col--platform--btm{% endunless %} js-times-col">
-                        {{row.platform}}
+                        {{ row.platform }}
                     </div>
                     <div class="times__col {% if table.modality == 'train' %} times__col--{{ table.modality }} {% endif %} hidden-xs js-times-col">
                         {% if table.modality == "train" %}
