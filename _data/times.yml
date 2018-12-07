@@ -20,7 +20,7 @@ table:
     direction: Rotterdam Centraal
     via: Gouda, Rotterdam Alexander
     platform: 8a
-    carrier: Deutsche-Bahn
+    carrier: NS
     type: Intercity
   - time: '20:01'
     direction: Baarn

@@ -74,9 +74,9 @@
                             </div>
                             <div class="visible-xs">
                                 {% if table.modality == 'train' %}
-                                {{ row.type }}
+                                    {{ row.type }}
                                 {% unless row.carrier == 'NS' %}
-                                    ({% if row.carrier == 'R-net' %}{{ row.carrier }}{% else %}{% assign words = row.carrier | split: '-' %}{% for word in words %}{{ word }}{% endfor %}{% endif %})
+                                    ({{ row.carrier }})
                                 {% endunless %}
                                 {% else %}
                                     {{ row.via }}
@@ -103,10 +103,10 @@
                             {% unless row.carrier == 'NS' %}
                             <div class="times__carrier">
                                 {% if row.carrier == 'R-net' %}
-                                {{ row.carrier }}
+                                    {{ row.carrier }}
                                 {% else %}
-                                {% assign words = row.carrier | split: '-' %}
-                                {% for word in words %} {{ word }} {% endfor %}
+                                    {% assign words = row.carrier | split: '-' %}
+                                    {% for word in words %} {{ word }} {% endfor %}
                                 {% endif %}
                             </div>
                             {% endunless %}
