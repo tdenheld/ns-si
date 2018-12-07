@@ -110,6 +110,9 @@
     }
 
     &--train {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        align-items: center;
         font-size: calculate-rem(14px);
 
         @include lg {
@@ -124,8 +127,15 @@
 }
 
 .times__logo {
-    width: 28px;
+    width: 35px;
     margin-right: $quarter-gutter;
+}
+
+.times__carrier {
+    position: relative;
+    top: -1px;
+    font-size: calculate-rem(12px);
+    font-weight: normal;
 }
 
 .times__line-150 {
