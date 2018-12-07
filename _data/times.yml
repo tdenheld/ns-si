@@ -27,7 +27,7 @@ table:
     via: Den Dolder, Soest-Zuid, Soest
     platform: '5b'
     alert: spoor
-    carrier: Veolia
+    carrier: Connexxion
     type: "<span class='fw-normal'>Stoptrein</span>"
   - time: '20:03'
     direction: Bovenkarspel-Grootebroek
