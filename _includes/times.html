@@ -94,7 +94,7 @@
                         <img src="/assets/img/carriers/{{ row.carrier }}.svg" class="times__logo" />
                         {% endif %}
                         <div>
-                            <div>
+                            <div class="{% unless row.type == 'Intercity' %} fw-normal {% endunless %}">
                                 {{ row.type }}
                             </div>
                             {% unless row.carrier == 'NS' %}

@@ -65,8 +65,25 @@
                     <div class="times__col times__col--platform {% unless table.modality == 'train' %}times__col--platform--btm{% endunless %} js-times-col">
                         {{row.platform}}
                     </div>
-                    <div class="times__col {% if table.modality == 'train' %} times__col--{{table.modality}} {% endif %} hidden-xs js-times-col">
-                        {{row.type}}
+                    <div class="times__col {% if table.modality == 'train' %} times__col--{{ table.modality }} {% endif %} hidden-xs js-times-col">
+                        {% if table.modality == "train" %}
+                        <img src="/assets/img/carriers/{{ row.carrier }}.svg" class="times__logo" />
+                        {% endif %}
+                        <div>
+                            <div class="{% unless row.type == 'Intercity' %} fw-normal {% endunless %}">
+                                {{ row.type }}
+                            </div>
+                            {% unless row.carrier == 'NS' %}
+                            <div class="times__carrier">
+                                {% if row.carrier == 'R-net' %}
+                                    {{ row.carrier }}
+                                {% else %}
+                                    {% assign words = row.carrier | split: '-' %}
+                                    {% for word in words %} {{ word }} {% endfor %}
+                                {% endif %}
+                            </div>
+                            {% endunless %}
+                        </div>
                     </div>
                 </div>
             </div>

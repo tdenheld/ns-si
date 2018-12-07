@@ -15,39 +15,39 @@ table:
     via: "'s-Hertogenbosch, Eindhoven, Weert, Roermond"
     platform: 18b
     carrier: NS
-    type: "Intercity"
+    type: Intercity
   - time: '19:56'
     direction: Rotterdam Centraal
     via: Gouda, Rotterdam Alexander
     platform: 8a
     carrier: Deutsche-Bahn
-    type: "Intercity"
+    type: Intercity
   - time: '20:01'
     direction: Baarn
     via: Den Dolder, Soest-Zuid, Soest
     platform: '5b'
     alert: spoor
     carrier: Connexxion
-    type: "<span class='fw-normal'>Stoptrein</span>"
+    type: Stoptrein
   - time: '20:03'
     direction: Bovenkarspel-Grootebroek
     via: Amersfoort, Apeldoorn, Deventer, Hengelo
     platform: '14'
     carrier: NS
-    type: "Intercity"
+    type: Sprinter
   - time: '20:06'
     direction: Breukelen
     via: Utrecht Zuilen, Maarssen
     platform: '5'
     carrier: R-net
-    type: "<span class='fw-normal'>Stoptrein</span>"
+    type: Stoptrein
     delay: "+5"
   - time: '20:11'
     direction: Den Helder
     via: Amsterdam Amstel, Amsterdam Centraal, Alkmaar
     platform: 7b
     carrier: NS
-    type: "Intercity"
+    type: Intercity
 
 - modality: btm
   cols:

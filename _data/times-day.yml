@@ -13,22 +13,26 @@ table:
     day: Vandaag
     via: "Uithuizermeeden, Warffum, Sauwerd"
     platform: 1
-    type: "Arriva Stoptrein"
+    type: "Stoptrein"
+    carrier: Arriva
   - time: "11:51"
     direction: Groningen
     day: Morgen
     via: "Uithuizermeeden, Warffum, Sauwerd"
     platform: 1
-    type: "Arriva Stoptrein"
+    type: "Stoptrein"
+    carrier: Arriva
   - time: "11:51"
     direction: Groningen
     day: Zondag 25 november
     via: "Uithuizermeeden, Warffum, Sauwerd"
     platform: 1
-    type: "Arriva Stoptrein"
+    type: "Stoptrein"
+    carrier: Arriva
   - time: "11:51"
     direction: Groningen
     day: Maandag 26 november
     via: "Uithuizermeeden, Warffum, Sauwerd"
     platform: 1
-    type: "Arriva Stoptrein"
+    type: "Stoptrein"
+    carrier: Arriva
