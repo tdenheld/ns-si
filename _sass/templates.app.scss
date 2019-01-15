@@ -139,6 +139,7 @@
 }
 
 .nav__icon {
+    position: relative;
     margin: 0;
     height: 50px;				
     justify-self: center;
@@ -149,4 +150,23 @@
     @include font-style(16px, normal, 1);
     color: $ns-light-blue;
     transition: $fade-all;			
+}
+
+.nav__badge {
+    $badge-scale: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    width: $badge-scale;
+    height: $badge-scale;
+    top: -3px;
+    right: -7px;
+    background-color: $ns-red-alert;
+    border-radius: 50%;
+    @include font-style(12px, normal, 1.25);
+    color: $ns-white;
+    box-shadow: 0 1px 8px rgba($ns-black, 0.2);
 }

@@ -14,6 +14,7 @@ nav:
     class: js-scroll-to	
   icon: alert--large
   title: Storingen
+  badge: 2
 - link:
     href: "#facilities"
     class: js-scroll-to	
