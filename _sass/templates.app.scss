@@ -7,12 +7,15 @@
 .tk-heading-xxl {
     margin: 0;
     @include font-style(36px, bold, 1.2);
+
     @include xs {
         font-size: calculate-rem(48px);
-    }		
+    }
+
     @include sm {
         font-size: calculate-rem(60px);
-    }		
+    }
+
     @include md {
         font-size: calculate-rem(80px);
     }
@@ -20,29 +23,35 @@
 
 .tk-heading-xl {
     @include font-style(28px, bold, 1.25);
+
     @include sm {
         font-size: calculate-rem(38px);
     }
 }
 
+
+
+
+
 // hero image
 // ---------------------------------
 .tk-hero {
-	position: relative;
-	width: 100%;
-	min-height: 300px;
-	max-height: 720px;
-	height: calc(100vh - 297px);
-	
-	@include md {
-		height: calc(100vh - 187px);
-	}
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    max-height: 640px;
+    height: calc(100vh - 297px);
+
+    @include md {
+        height: calc(100vh - 187px);
+    }
 }
 
 .tk-hero__content {
     position: absolute;
     width: 100%;
     bottom: $half-gutter;
+
     @include md {
         bottom: $gutter;
     }
@@ -79,9 +88,8 @@
         rgba($ns-black, 0) 0%,
         rgba($ns-black, 0) 50%,
         rgba($ns-black, 0.32) 75%,
-        rgba($ns-black, 0.64) 100%
-    );
-}	
+        rgba($ns-black, 0.64) 100%);
+}
 
 .tk-hero__heading {
     margin: 0;
@@ -103,14 +111,14 @@
 
     @include sm {
         grid-gap: $double-gutter;
-        grid-template-columns: repeat(6, max-content);	
+        grid-template-columns: repeat(6, max-content);
     }
 
     svg {
-		fill: $ns-light-blue;
-		transition: $fade-all;
-	}
-}				
+        fill: $ns-light-blue;
+        transition: $fade-all;
+    }
+}
 
 .nav__item {
     display: grid;
@@ -118,12 +126,12 @@
     justify-content: center;
     transition: $fade-all;
     cursor: pointer;
-    
+
     &:hover {
-        > .nav__title {
+        >.nav__title {
             color: $ns-blue;
         }
-        
+
         svg {
             fill: $ns-blue;
         }
@@ -132,7 +140,7 @@
 
 .nav__link {
     box-shadow: none;
-    
+
     &:hover {
         box-shadow: none;
     }
@@ -141,7 +149,7 @@
 .nav__icon {
     position: relative;
     margin: 0;
-    height: 50px;				
+    height: 50px;
     justify-self: center;
 }
 
@@ -149,7 +157,7 @@
     margin: 0;
     @include font-style(16px, normal, 1);
     color: $ns-light-blue;
-    transition: $fade-all;			
+    transition: $fade-all;
 }
 
 .nav__badge {
