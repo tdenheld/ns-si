@@ -28,7 +28,7 @@ layout: default
             <a href="{{ item.link.href }}" class="nav__link {{ item.link.class }}">
                 <div class="nav__item">
                     <div class="nav__icon">
-                        <span include="/assets/img/icons/{{ item.icon }}.svg"></span>
+                        <span>{% include icons/{{ item.icon }}.svg %}</span>
                         {% if item.badge %}
                         <span class="nav__badge">{{ item.badge }}</span>
                         {% endif %}

@@ -29,7 +29,7 @@ station-code: generiek
             {% for item in site.data.content.nav %}
             <a href="{{ item.link.href }}" class="nav__link {{ item.link.class }}">
                 <div class="nav__item">
-                    <span class="nav__icon" include="/assets/img/icons/{{ item.icon }}.svg"></span>
+                    <span class="nav__icon">{% include icons/{{ item.icon }}.svg %}</span>
                     <span class="nav__title">{{item.title}}<span>
                 </div>
             </a>
