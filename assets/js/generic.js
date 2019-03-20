@@ -4,7 +4,6 @@
 var vw = Number;
 var vh = Number;
 var mobile = Boolean;
-var scrolled = false;
 
 
 
@@ -27,24 +26,6 @@ update_window_size();
 $(window).resize(() => {
     update_window_size();
 });
-
-
-
-
-// functionality that"s on linked on scroll
-// ------------------------------------------------------------
-$(window).scroll(() => {
-    scrolled = true;
-    if (scrolled) {
-        //requestAnimationFrame(scrolling);
-    };
-});
-
-function scrolling() {
-    var pos = $(window).scrollTop();
-    // fade arrow scroll down button
-    scrolled = false;
-};
 
 
 
