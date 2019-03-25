@@ -1,0 +1,75 @@
+.nav {
+    display: grid;
+    grid-column-gap: $half-gutter;
+    grid-row-gap: $one-half-gutter;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include sm {
+        grid-gap: $double-gutter;
+        grid-template-columns: repeat(6, max-content);
+    }
+
+    svg {
+        fill: $ns-light-blue;
+        transition: $fade-all;
+    }
+}
+
+.nav__item {
+    display: grid;
+    grid-gap: 5px;
+    justify-content: center;
+    transition: $fade-all;
+    cursor: pointer;
+
+    &:hover {
+        >.nav__title {
+            color: $ns-blue;
+        }
+
+        svg {
+            fill: $ns-blue;
+        }
+    }
+}
+
+.nav__link {
+    box-shadow: none;
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+.nav__icon {
+    position: relative;
+    margin: 0;
+    height: 50px;
+    justify-self: center;
+}
+
+.nav__title {
+    margin: 0;
+    @include font-style(16px, normal, 1);
+    color: $ns-light-blue;
+    transition: $fade-all;
+}
+
+.nav__badge {
+    $badge-scale: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    width: $badge-scale;
+    height: $badge-scale;
+    top: -3px;
+    right: -7px;
+    background-color: $ns-red-alert;
+    border-radius: 50%;
+    @include font-style(12px, normal, 1.25);
+    color: $ns-white;
+    box-shadow: 0 1px 8px rgba($ns-black, 0.2);
+}

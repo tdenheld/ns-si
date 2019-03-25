@@ -14,9 +14,35 @@
 
 
 
-// overflows
+// overflows | positions
 // ----------------------------------------------------------------------
 .o-hidden { overflow: hidden; }
+.pos-r { position: relative; }
+.pos-a { position: absolute; }
+.pos-f { position: fixed; }
+.pos-s { position: static; }
+.pos-i { position: inherit; }
+
+// nudge elements a tiny bit
+@for $i from 0 through 20 {
+    $y: $i * 1px;
+    .top-#{$i}px {top: $y;}
+    .top-min-#{$i}px {top: -$y;}
+    .bottom-#{$i}px {bottom: $y;}
+    .bottom-min-#{$i}px {bottom: -$y;}
+    .left-#{$i}px {left: $y;}
+    .left-min-#{$i}px {left: -$y;}
+    .right-#{$i}px {right: $y;}
+    .right-min-#{$i}px {right: -$y;}
+}
+
+// z-index
+.z-1   { z-index: 1; }
+.z-2   { z-index: 2; }
+.z-3   { z-index: 3; }
+.z-9   { z-index: 9; }
+.z-99  { z-index: 99; }
+.z-999 { z-index: 999; }
 
 
 
@@ -696,9 +722,9 @@
 // line-heights
 // ----------------------------------------------------------------------
 .lh-none  { line-height: 0; }
-.lh-solid { line-height: 1; }
-.lh-title { line-height: 1.25; }
-.lh-copy  { line-height: 1.5; }
+.lh-solid { line-height: $lh-solid; }
+.lh-title { line-height: $lh-title; }
+.lh-copy  { line-height: $lh-copy; }
 
 @include sm {
 	.lh-none-sm  { line-height: 0; }

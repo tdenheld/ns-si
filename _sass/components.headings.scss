@@ -1,0 +1,24 @@
+.tk-heading-xxl {
+    margin: 0;
+    @include font-style(36px, bold, 1.2);
+
+    @include xs {
+        font-size: calculate-rem(48px);
+    }
+
+    @include sm {
+        font-size: calculate-rem(60px);
+    }
+
+    @include md {
+        font-size: calculate-rem(80px);
+    }
+}
+
+.tk-heading-xl {
+    @include font-style(28px, bold, 1.25);
+
+    @include sm {
+        font-size: calculate-rem(38px);
+    }
+}

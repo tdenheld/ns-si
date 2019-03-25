@@ -82,7 +82,7 @@
 }
 
 .times__col {
-    // delay in transition triggered in tk305.generic.js
+    // delay in transition triggered in generic.js
     @for $i from 1 through 8 {
         &:nth-child(#{$i}) {
             transition: all (180ms + ($i * 50)) $ease;

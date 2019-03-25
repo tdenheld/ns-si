@@ -8,6 +8,7 @@ $fade-all: 					all 300ms $ease;
 $fade-link:                 all 200ms $ease;
 
 
+
 /*-------------------
     Media queries
 --------------------*/
@@ -16,6 +17,7 @@ $xs: 480px;
 $sm: 640px;
 $md: 912px;
 $lg: 1200px;
+
 
 
 /*-------------------
@@ -35,6 +37,16 @@ $quarter-gutter:			$grid-gutter-width / 4;
 
 
 /*-------------------
+      Typography
+--------------------*/
+
+$lh-copy: 1.5;
+$lh-title: 1.25;
+$lh-solid: 1;
+
+
+
+/*-------------------
          Misc
 --------------------*/
 
@@ -49,7 +61,7 @@ $box-shadow-container:		0 2px 0 rgba($ns-grey, 0.15);
 
 $text-shadow-1:				1px 1px 0 rgba($ns-black, 0.5);
 $text-shadow-2:				0 0 50px rgba($ns-black, 0.15), 1px 1px 0 rgba($ns-black, 0.3);
-$text-shadow-tile:			0 0 10px rgba($ns-black, 0.2), 1px 1px 0 rgba($ns-black, 0.35);
+$text-shadow-tile:			0 0 10px rgba($ns-black, 0.2), 1px 1px 0 rgba($ns-black, 0.35);		
 							
 $gradient-tile: 			linear-gradient(to bottom,
 							rgba($ns-black, 0) 0%,

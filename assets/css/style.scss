@@ -19,13 +19,17 @@
 // Components
 @import "components.avt";
 @import "components.buttons";
+@import "components.clock";
+@import "components.credit";
 @import "components.links";
+@import "components.headings";
+@import "components.hero";
+@import "components.misc";
+@import "components.navigation";
 @import "components.switch";
 @import "components.times";
-@import "components.clock";
 
 // Templates
-@import "templates.app";
 
 // Utilities
 @import "utilities.animate";
