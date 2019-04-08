@@ -18,3 +18,9 @@
     color: $ns-white;
     text-shadow: 0 0 50px rgba($ns-black, 0.7), 1px 1px 0 rgba($ns-black, 0.35);
 }
+
+.tk-credit__content--recrute {
+    @include sm {
+        font-size: calculate-rem(18px);
+    }
+}
