@@ -22,35 +22,7 @@
 
 .tk-hero__bg {
     @include full(absolute);
-    @include bg(cover);
-
-    &--ut {
-        background-image: url("/assets/img/heros/hero-ut.jpg");
-    }
-
-    &--asd {
-        background-image: url("/assets/img/heros/hero-asd.jpg");
-    }
-
-    &--rtd {
-        background-image: url("/assets/img/heros/hero-rtd.jpg");
-    }
-
-    &--gvc {
-        background-image: url("/assets/img/heros/hero-gvc.jpg");
-    }
-
-    &--nm {
-        background-image: url("/assets/img/heros/hero-nm.jpg");
-    }
-
-    &--ah {
-        background-image: url("/assets/img/heros/hero-ah.jpg");
-    }
-
-    &--generiek {
-        background-image: url("/assets/img/heros/hero-generiek.jpg");
-    }
+    object-fit: cover;
 }
 
 .tk-hero__gradient {

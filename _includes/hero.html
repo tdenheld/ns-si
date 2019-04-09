@@ -1,0 +1,30 @@
+<div class="tk-hero">
+    <img src="/assets/img/heros/hero-{{ page.station-code }}.jpg" class="tk-hero__bg">
+    <div class="tk-hero__gradient"></div>
+
+    <!-- photo credit -->
+    <div class="tk-credit">
+        {% if page.station-code=='generiek' %}
+        <div class="tk-credit__content tk-credit__content--recrute">
+            Jouw foto hier? Bekijk <a class="unlink"><b><u>ns.nl/stationskiekje</u></b></a>
+        </div>
+        {% else %}
+        <div class="tk-credit__content">
+            Foto: <a class="unlink"><b><u>@janssen23</u></b></a> | <a class="unlink"><u>Jouw foto hier?</u></a>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="tk-hero__content">
+        <div class="container header__content db">
+            <ul class="breadcrumb mb-0">
+                <li class="breadcrumb__item f-white ts-2">
+                    <a class="breadcrumb__link f-white ts-2" href="/">
+                        {{ site.data.content.breadcrum }}
+                    </a>
+                </li>
+            </ul>
+            <h1 class="tk-heading-xxl tk-hero__heading">{{ page.title }}</h1>
+        </div>
+    </div>
+</div>

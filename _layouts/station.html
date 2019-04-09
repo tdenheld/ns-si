@@ -2,58 +2,8 @@
 layout: default
 ---
 
-<!-- hero -->
-<div class="tk-hero">
-    <div class="tk-hero__bg tk-hero__bg--{{ page.station-code }}"></div>
-    <div class="tk-hero__gradient"></div>
-
-    <!-- photo credit -->
-    <div class="tk-credit">
-        {% if page.station-code=='generiek' %}
-        <div class="tk-credit__content tk-credit__content--recrute">
-            Jouw foto hier? Bekijk <a class="unlink"><b><u>ns.nl/stationskiekje</u></b></a>
-        </div>
-        {% else %}
-        <div class="tk-credit__content">
-            Foto: <b>Jan Janssen</b>, <a class="unlink"><u>@janssen78</u></a> <a class="unlink"><u>#stationskiekje</u></a>
-        </div>
-        {% endif %}
-    </div>
-
-    <div class="tk-hero__content">
-        <div class="container header__content db">
-            <ul class="breadcrumb mb-0">
-                <li class="breadcrumb__item f-white ts-2">
-                    <a class="breadcrumb__link f-white ts-2" href="/">
-                        {{ site.data.content.breadcrum }}
-                    </a>
-                </li>
-            </ul>
-            <h1 class="tk-heading-xxl tk-hero__heading">{{ page.title }}</h1>
-        </div>
-    </div>
-</div>
-
-<!-- in-app navigation -->
-<div class="bg-white">
-    <div class="container header__content db pv-4">
-        <div class="nav">
-            {% for item in site.data.content.nav %}
-            <a href="{{ item.link.href }}" class="nav__link {{ item.link.class }}">
-                <div class="nav__item">
-                    <div class="nav__icon">
-                        <span>{% include icons/{{ item.icon }}.svg %}</span>
-                        {% if item.badge %}
-                        <span class="nav__badge">{{ item.badge }}</span>
-                        {% endif %}
-                    </div>
-                    <span class="nav__title">{{item.title}}<span>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-    </div>
-</div>
+{% include hero.html %}
+{% include nav.html %}
 
 <!-- travel info -->
 <div class="bg-white pv-2 pb-6-sm">

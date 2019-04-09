@@ -1,0 +1,19 @@
+<div class="bg-white">
+    <div class="container header__content db pv-4">
+        <div class="nav">
+            {% for item in site.data.content.nav %}
+            <a href="{{ item.link.href }}" class="nav__link {{ item.link.class }}">
+                <div class="nav__item">
+                    <div class="nav__icon">
+                        <span>{% include icons/{{ item.icon }}.svg %}</span>
+                        {% if item.badge %}
+                        <span class="nav__badge">{{ item.badge }}</span>
+                        {% endif %}
+                    </div>
+                    <span class="nav__title">{{item.title}}<span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
