@@ -1542,7 +1542,6 @@
     </div>
 </div>
 
-<!-- heading -->
 <div class="container container--section">
     <div class="grid">
         <div class="grid__unit s-4-4 m-12-12 l-8-12">
@@ -1554,18 +1553,21 @@
                     </header>
                 </div>
                 <div class="tile__content">
-
                     <form class="searchForm autosuggest ng-untouched ng-pristine ng-valid" novalidate="" action="stations/rotterdam-centraal.html"><label class="alt"
-                            for="searchField">Station</label>
-                        <div class="searchForm__field"><span class="twitter-typeahead"><input aria-autocomplete="both"
+                            for="searchField">
+                            Station
+                    </label>
+                        <div class="searchForm__field">
+                            <span class="twitter-typeahead">
+                                <input aria-autocomplete="both"
                                     aria-owns="autosuggest__list" autocomplete="off" class="searchField autosuggest__input ng-untouched ng-pristine ng-valid"
                                     dir="auto" formcontrolname="search" id="searchField" name="station" placeholder="Type uw station"
                                     role="combobox" spellcheck="false" type="search">
-                                <div class="searchForm__clear"><a class="clearButton clearButton--grey" href="#"><span
-                                            class="icon"><span class="alt">Veld
-                                                leegmaken</span></span></a></div>
-
-                            </span></div>
+                                <div class="searchForm__clear"><a class="clearButton clearButton--grey" href="#">
+                                    <span class="icon"><span class="alt">Veld leegmaken</span></span></a>
+                                </div>
+                            </span>
+                        </div>
                         <div class="searchForm__submit"><input class="button" type="submit" value="Zoek"></div>
                     </form>
                 </div>
@@ -1573,8 +1575,6 @@
         </div>
     </div>
 </div>
-
-<!-- link list of stations -->
 <rio-si-direct-links>
     <div class="container container--header mb-2">
         <h2 class="headingXL ovr-heading-not-contained">Direct naar</h2>
@@ -1600,6 +1600,7 @@
         </div>
     </div>
 </rio-si-direct-links>
+<div id="instafeed"></div>
     </div>
     <footer class="footer">
     <div class="container">
@@ -1766,8 +1767,10 @@
 
     <!-- JAVASCRIPT -->
     <script src="/assets/js/ns.generic.min.js"></script>
+    <script src="/assets/js/instafeed.min.js"></script>
     <script src="/assets/js/plugins.bundle.min.js"></script>
     <script src="/assets/js/generic.js"></script>
+    <script src="/assets/js/station.js"></script>
     
 </body>
 
