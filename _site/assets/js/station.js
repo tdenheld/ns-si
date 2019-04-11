@@ -163,22 +163,28 @@ function clock() {
 
 
 
-// clock
+// instafeed
 // ------------------------------------------------------------------
-var feed = new Instafeed({
-    get: 'tagged',
-    tagName: 'design',
-    clientId: '0f679802aa48429ea7fbd6184192d636',
-    template: '<a href="{{link}}"><img src="{{image}}" /></a>'
-});
-feed.run();
+function insta() {
+    var feed = new Instafeed({
+        get: 'user',
+        userId: '1712510367',
+        clientId: '30ccf00f94704d37af4f0a8d08b66f8a',
+        accessToken: '1712510367.30ccf00.7301d7d0c41e4000aff7933cfb05d99e',
+        template: '<a href="{{link}}" class="unlink lh-none" target="_blank"><img src="{{image}}" /></a>',
+        limit: 24,
+        resolution: 'standard_resolution'
+    });
+    feed.run();
+};
 
 
 
 // init functions
 // ------------------------------------------------------------------
-$(function(){
+$(function () {
     modalities();
     switchTimes();
     clock();
+    insta();
 });
