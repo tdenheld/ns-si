@@ -9,9 +9,8 @@ $black: 					#000;
 $ns-white: $white;
 $ns-black: $black;
 
-$ns-light-blue: 			#0079d3; // has to be: #0063d3
-$ns-light-blue-2: 			#0d73c8;
-$ns-light-blue-3:			#1a66b2;
+$ns-light-blue: 			#0063d3; // was #0079d3
+$ns-light-blue-2: 			darken($ns-light-blue, 10%); // #004ba0
 
 $ns-blue: 					#003082;
 $ns-blue-2: 				#0050a8;
@@ -23,6 +22,7 @@ $ns-yellow-2: 				#ffb519;
 $ns-yellow-3: 				#ffa11d;
 $ns-yellow-4: 				#e6b517;
 $ns-yellow-5:				#cfa317;
+$ns-yellow-light:           mix(#fff, $ns-yellow, 85%);
 
 $ns-orange: 				#ff7700;
 $ns-ovchip: 				#ff0098;
@@ -32,6 +32,8 @@ $ns-warning: $ns-yellow-2;
 
 $ns-green: 					#009a42;
 $ns-green-2:				#008a39;
+$ns-green-sexy:             #00AA89;
+$ns-green-sexy-2:           #008670;
 
 $ns-grey: 					#070721;
 $ns-grey-2:  mix(#fff, $ns-grey, 10%); //90%  #1f1f37

@@ -6,6 +6,13 @@
     overflow: hidden;
 }
 
+.button,
+input[type=button],
+input[type=submit],
+button {
+    border-radius: 4px;
+}
+
 .iconLink--scroll-down {
     &:before {
         left: 0;
