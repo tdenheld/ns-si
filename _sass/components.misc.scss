@@ -1,14 +1,10 @@
 .instafeed {
     line-height: 14px;
-    column-count: 3;
+    column-count: 2;
     column-gap: 2px;
 
     @include sm {
         column-count: 4;
-    }
-
-    @include md {
-        column-count: 6;
     }
 
     img {

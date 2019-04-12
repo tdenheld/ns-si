@@ -24,7 +24,7 @@
 .pos-i { position: inherit; }
 
 // nudge elements a tiny bit
-@for $i from 0 through 20 {
+@for $i from 0 through 14 {
     $y: $i * 1px;
     .top-#{$i}px {top: $y;}
     .top-min-#{$i}px {top: -$y;}
@@ -63,6 +63,14 @@
 .rotate-270 { transform: rotate(270deg); }
 .rotate-315 { transform: rotate(315deg); }
 
+.rotate-svg-45  { svg { transform: rotate(45deg); }}
+.rotate-svg-90  { svg { transform: rotate(90deg); }}
+.rotate-svg-135 { svg { transform: rotate(135deg); }}
+.rotate-svg-180 { svg { transform: rotate(180deg); }}
+.rotate-svg-225 { svg { transform: rotate(225deg); }}
+.rotate-svg-270 { svg { transform: rotate(270deg); }}
+.rotate-svg-315 { svg { transform: rotate(315deg); }}
+
 
 
 /*-------------------
@@ -91,17 +99,37 @@
 */
 
 // auto-margins
-.m-auto {
-    margin: 0 auto;
-}
+// rem padding (NS tile padding)
+.ma-auto {margin: auto;}
+.mh-auto {margin: 0 auto;}
+.mv-auto {margin: auto 0;}
+.pa-2r {padding: 2rem;}
+.ph-2r {padding-left: 2rem; padding-right: 2rem;}
+.pv-2r {padding-top: 2rem; padding-bottom: 2rem;}
+
 @include sm {
-    .m-auto-sm {margin: 0 auto;}     
+    .ma-auto-sm {margin: auto;}
+    .mh-auto-sm {margin: 0 auto;}
+    .mv-auto-sm {margin: auto 0;}
+    .pa-2r-sm {padding: 2rem;}  
+    .ph-2r-sm {padding-left: 2rem; padding-right: 2rem;}
+    .pv-2r-sm {padding-top: 2rem; padding-bottom: 2rem;}  
 }
 @include md {
-    .m-auto-md {margin: 0 auto;}     
+    .ma-auto-md {margin: auto;}
+    .mh-auto-md {margin: 0 auto;}
+    .mv-auto-md {margin: auto 0;}
+    .pa-2r-md {padding: 2rem;} 
+    .ph-2r-md {padding-left: 2rem; padding-right: 2rem;}
+    .pv-2r-md {padding-top: 2rem; padding-bottom: 2rem;} 
 }
 @include lg {
-    .m-auto-lg {margin: 0 auto;}     
+    .ma-auto-lg {margin: auto;}
+    .mh-auto-lg {margin: 0 auto;}
+    .mv-auto-lg {margin: auto 0;}
+    .pa-2r-lg {padding: 2rem;}  
+    .ph-2r-lg {padding-left: 2rem; padding-right: 2rem;}
+    .pv-2r-lg {padding-top: 2rem; padding-bottom: 2rem;} 
 }
 
 @for $i from 0 through 20 {	
@@ -301,7 +329,7 @@
 
 // gap
 // -------------------------
-@for $i from 0 through 8 {
+@for $i from 0 through 12 {
 	.gap-#{$i} { @include spacer($i, grid-gap); }
 	.col-gap-#{$i} { @include spacer($i, grid-column-gap); }
 	.row-gap-#{$i} { @include spacer($i, grid-row-gap); }
@@ -612,15 +640,20 @@
 .o-025 { opacity: .025; }
 .o-0   { opacity: 0;    }
 
-// visibility
+// visibility breakpoints
 // ----------------------------------------------------------------------
-.visible { visibility: visible; }
-.hidden {  visibility: hidden; } 
 .visible-xs { @include sm     { display: none; }}
 .hidden-xs {  @include sm-max { display: none; }}
 .hidden-sm {  @include sm-ex  { display: none; }}
 .hidden-md {  @include md-ex  { display: none; }}
 .hidden-lg {  @include lg     { display: none; }}
+
+// hidden objects
+// ----------------------------------------------------------------------
+.hidden-obj {
+    position: absolute;
+    visibility: hidden;
+}
 
 
 
@@ -728,30 +761,31 @@
 
 @include sm {
 	.lh-none-sm  { line-height: 0; }
-	.lh-solid-sm { line-height: 1; }
-	.lh-title-sm { line-height: 1.25; }
-	.lh-copy-sm  { line-height: 1.5; }
+	.lh-solid-sm { line-height: $lh-solid; }
+	.lh-title-sm { line-height: $lh-title; }
+	.lh-copy-sm  { line-height: $lh-copy; }
 }
 @include md {
 	.lh-none-md  { line-height: 0; }
-	.lh-solid-md { line-height: 1; }
-	.lh-title-md { line-height: 1.25; }
-	.lh-copy-md  { line-height: 1.5; }
+	.lh-solid-md { line-height: $lh-solid; }
+	.lh-title-md { line-height: $lh-title; }
+	.lh-copy-md  { line-height: $lh-copy; }
 }
 @include lg {
 	.lh-none-lg  { line-height: 0; }
-	.lh-solid-lg { line-height: 1; }
-	.lh-title-lg { line-height: 1.25; }
-	.lh-copy-lg  { line-height: 1.5; }
+	.lh-solid-lg { line-height: $lh-solid; }
+	.lh-title-lg { line-height: $lh-title; }
+	.lh-copy-lg  { line-height: $lh-copy; }
 }
 
 // font colors
 // ----------------------------------------------------------------------
 .f-blue {color: $ns-grey;}
-.f-white {color: $ns-white; &:hover{color: $ns-white;}}
+.f-white {color: $ns-white;}
 .f-yellow {color: $ns-yellow;}
 .f-blue {color: $ns-blue;}
 .f-light-blue {color: $ns-light-blue;}
+.f-green-sexy {color: $ns-green-sexy;}
 .f-red {color: $ns-red-alert;}
 .f-grey {color: $ns-grey;}
 .f-grey-2 {color: $ns-grey-2;}
@@ -773,6 +807,22 @@
 		font-weight: $weight;
 	}
 }
+
+// letter spacings
+// ----------------------------------------------------------------------
+.ls-normal { letter-spacing: initial; }
+.ls-08 { letter-spacing: -0.8px; }
+.ls-07 { letter-spacing: -0.7px; }
+.ls-06 { letter-spacing: -0.6px; }
+.ls-05 { letter-spacing: -0.5px; }
+.ls-03 { letter-spacing: -0.3px; }
+.ls-2 { letter-spacing: 2px; }
+.ls-4 { letter-spacing: 4px; }
+
+// font style
+// ----------------------------------------------------------------------
+.fs-i {font-style: italic}
+.fs-u {text-transform: uppercase}
 
 // word wraps
 // ----------------------------------------------------------------------
@@ -834,6 +884,8 @@
 .svg-light-blue svg {fill: $ns-light-blue;}
 .svg-red svg {fill: $ns-red-alert;}
 .svg-white svg {fill: $ns-white;}
+.svg-green svg {fill: $ns-green;}
+.svg-green-sexy svg {fill: $ns-green-sexy;}
 .svg-grey svg {fill: $ns-grey;}
 .svg-grey-2 svg {fill: $ns-grey-2;}
 .svg-grey-3 svg {fill: $ns-grey-3;}
@@ -843,6 +895,7 @@
 .svg-grey-6b svg {fill: $ns-grey-6b;}
 .svg-grey-7 svg {fill: $ns-grey-7;}
 .svg-grey-8 svg {fill: $ns-grey-8;}
+.svg-link { svg {cursor: pointer; transition: $fade-link; fill: $ns-light-blue;} &:hover {svg {fill: $ns-blue;}}}
 
 
 
@@ -889,6 +942,14 @@
 .bo-b-white {border-bottom: 1px solid $ns-white;}
 .bo-l-white {border-left: 1px solid $ns-white;}
 .bo-r-white {border-right: 1px solid $ns-white;}
+
+.bo-a-6 {border: 1px solid $ns-grey-6;}
+.bo-h-6 {border-right: 1px solid $ns-grey-6; border-left: 1px solid $ns-grey-6;}
+.bo-v-6 {border-top: 1px solid $ns-grey-6; border-bottom: 1px solid $ns-grey-6;}
+.bo-t-6 {border-top: 1px solid $ns-grey-6;}
+.bo-b-6 {border-bottom: 1px solid $ns-grey-6;}
+.bo-l-6 {border-left: 1px solid $ns-grey-6;}
+.bo-r-6 {border-right: 1px solid $ns-grey-6;}
 
 .bo-a-6b {border: 1px solid $ns-grey-6b;}
 .bo-h-6b {border-right: 1px solid $ns-grey-6b; border-left: 1px solid $ns-grey-6b;}
@@ -974,7 +1035,9 @@
 .bg-blue {background-color: $ns-blue;}
 .bg-yellow {background-color: $ns-yellow;}
 .bg-light-blue {background-color: $ns-light-blue;}
+.bg-vl-blue {background-color: $ns-blue-4;}
 .bg-white {background-color: $ns-white;}
+.bg-red {background-color: $ns-red-alert;}
 .bg-grey {background-color: $ns-grey;}
 .bg-grey-2 {background-color: $ns-grey-2;}
 .bg-grey-3 {background-color: $ns-grey-3;}
@@ -999,8 +1062,7 @@
 .gd-110-turquoise {background: linear-gradient(110deg, #79CEC3 0%, #BCFFF0 100%);}
 
 // radial
-.gd-r-yellow {background: radial-gradient(circle at 50% 50%, #FFE48A 0%, $ns-yellow 100%);}
-.gd-r-yellow-subtle {background: radial-gradient(circle at 50% 50%, #FFD342 0%, $ns-yellow 100%);}
+.gd-r-yellow {background: radial-gradient(circle at 50% 50%, #FFD342 0%, $ns-yellow 100%);}
 .gd-r70-50-yellow {background: radial-gradient(circle at 70% 50%, #FFE48A 0%, $ns-yellow 100%);}
 .gd-r30-50-yellow {background: radial-gradient(circle at 50% 70%, #FFE48A 0%, $ns-yellow 100%);}
 .gd-r-vivid {background: radial-gradient(circle at 50% 50%, #8ad4e4 0%, #0d6b9e 100%);}

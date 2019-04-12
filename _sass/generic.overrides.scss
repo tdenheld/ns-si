@@ -25,10 +25,13 @@ button {
     }
 }
 
-.ovr-heading-not-contained {
-    margin-left: 21px;
+.ovr-not-contained {
+    padding-left: 21px;
+    padding-right: 21px;
+
     @include sm {
-        margin-left: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 

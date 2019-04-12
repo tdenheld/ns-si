@@ -168,11 +168,11 @@ function clock() {
 function insta() {
     var feed = new Instafeed({
         get: 'user',
-        userId: '1712510367',
-        clientId: '30ccf00f94704d37af4f0a8d08b66f8a',
-        accessToken: '1712510367.30ccf00.7301d7d0c41e4000aff7933cfb05d99e',
+        userId: '12415989910',
+        clientId: 'f868a5a81fe14853838ef175c41a29ce',
+        accessToken: '12415989910.f868a5a.07cb4dbd5aae45f3ae46ddb4f14dc770',
         template: '<a href="{{link}}" class="unlink lh-none" target="_blank"><img src="{{image}}" /></a>',
-        limit: 24,
+        limit: 12,
         resolution: 'standard_resolution'
     });
     feed.run();
