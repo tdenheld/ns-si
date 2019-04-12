@@ -166,16 +166,19 @@ function clock() {
 // instafeed
 // ------------------------------------------------------------------
 function insta() {
-    var feed = new Instafeed({
-        get: 'user',
-        userId: '12415989910',
-        clientId: 'f868a5a81fe14853838ef175c41a29ce',
-        accessToken: '12415989910.f868a5a.07cb4dbd5aae45f3ae46ddb4f14dc770',
-        template: '<a href="{{link}}" class="unlink lh-none" target="_blank"><img src="{{image}}" /></a>',
-        limit: 12,
-        resolution: 'standard_resolution'
-    });
-    feed.run();
+    const obj = $("#instafeed");
+    if (obj[0]) {
+        var feed = new Instafeed({
+            get: 'user',
+            userId: '12415989910',
+            clientId: 'f868a5a81fe14853838ef175c41a29ce',
+            accessToken: '12415989910.f868a5a.07cb4dbd5aae45f3ae46ddb4f14dc770',
+            template: '<a href="{{link}}" class="unlink lh-none" target="_blank"><img src="{{image}}" /></a>',
+            limit: 12,
+            resolution: 'standard_resolution'
+        });
+        feed.run();
+    };
 };
 
 
