@@ -25,6 +25,23 @@ button {
     }
 }
 
+.headingXXL,
+.headingXL,
+.headingL,
+h1,
+h2 {
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+}
+
+.container--slim {
+    padding: 0 14px;
+
+    @include sm {
+        padding: 0 2rem;
+    }
+}
+
 .ovr-not-contained {
     padding-left: 21px;
     padding-right: 21px;
@@ -33,13 +50,4 @@ button {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-}
-
-.headingXXL,
-.headingXL,
-.headingL,
-h1,
-h2 {
-    line-height: 1.25;
-    letter-spacing: -0.3px;
 }
