@@ -1,0 +1,131 @@
+- modality: train
+  cols:
+  - label: Spoor
+  - label: Trein
+  rows:
+  - time: '19:53'
+    direction: Maastricht
+    via: "'s-Hertogenbosch, Eindhoven, Weert, Roermond"
+    platform: 18b
+    carrier: NS
+    type: Intercity
+  - time: '19:56'
+    direction: Rotterdam Centraal
+    via: Gouda, Rotterdam Alexander
+    platform: 8a
+    carrier: NS
+    type: Intercity
+  - time: '20:01'
+    direction: Baarn
+    via: Den Dolder, Soest-Zuid, Soest
+    platform: '5b'
+    alert: spoor
+    carrier: Connexxion
+    type: Stoptrein
+  - time: '20:03'
+    direction: Bovenkarspel-Grootebroek
+    via: Amersfoort, Apeldoorn, Deventer, Hengelo
+    platform: '14'
+    carrier: NS
+    type: Sprinter
+  - time: '20:06'
+    direction: Breukelen
+    via: Utrecht Zuilen, Maarssen
+    platform: '5'
+    carrier: R-net
+    type: Stoptrein
+    delay: '+5'
+  - time: '20:11'
+    direction: Den Helder
+    via: Amsterdam Amstel, Amsterdam Centraal, Alkmaar
+    platform: 7b
+    carrier: NS
+    type: Intercity
+  - time: '20:12'
+    direction: Maastricht
+    via: "'s-Hertogenbosch, Eindhoven, Weert, Roermond"
+    platform: 18b
+    carrier: NS
+    type: Intercity
+  - time: '20:13'
+    direction: Rotterdam Centraal
+    via: Gouda, Rotterdam Alexander
+    platform: 8a
+    carrier: NS
+    type: Intercity
+  - time: '20:13'
+    direction: Baarn
+    via: Den Dolder, Soest-Zuid, Soest
+    platform: '5b'
+    carrier: Connexxion
+    type: Stoptrein
+    delay: '+8'
+  - time: '20:15'
+    direction: Bovenkarspel-Grootebroek
+    via: Amersfoort, Apeldoorn, Deventer, Hengelo
+    platform: '14'
+    carrier: NS
+    type: Sprinter
+  - time: '20:19'
+    direction: Breukelen
+    via: Utrecht Zuilen, Maarssen
+    platform: '5'
+    carrier: R-net
+    type: Stoptrein
+  - time: '20:19'
+    direction: Den Helder
+    via: Amsterdam Amstel, Amsterdam Centraal, Alkmaar
+    platform: 7b
+    carrier: NS
+    type: Intercity
+  - time: '20:20'
+    direction: Almere Centrum
+    via: Utrecht Overvecht, Hilversum 
+    platform: '5'
+    carrier: R-net
+    type: Stoptrein
+    delay: '+5'
+  - time: '20:21'
+    direction: Den Haag Centraal
+    via: Amsterdam Amstel, Amsterdam Centraal, Alkmaar
+    platform: 7b
+    carrier: NS
+    type: Intercity
+  - time: '20:21'
+    direction: Maastricht
+    via: "'s-Hertogenbosch, Eindhoven, Weert, Roermond"
+    platform: 18b
+    carrier: NS
+    type: Intercity
+  - time: '20:25'
+    direction: Rotterdam Centraal
+    via: Gouda, Rotterdam Alexander
+    platform: 8a
+    carrier: NS
+    type: Intercity
+    alert: spoor
+  - time: '20:26'
+    direction: Baarn
+    via: Den Dolder, Soest-Zuid, Soest
+    platform: '5b'
+    carrier: Connexxion
+    type: Stoptrein
+    delay: '+8'
+  - time: '20:26'
+    direction: Bovenkarspel-Grootebroek
+    via: Amersfoort, Apeldoorn, Deventer, Hengelo
+    platform: '14'
+    carrier: NS
+    type: Sprinter
+  - time: '20:28'
+    direction: Breukelen
+    via: Utrecht Zuilen, Maarssen
+    platform: '5'
+    carrier: R-net
+    type: Stoptrein
+  - time: '20:31'
+    direction: Den Helder
+    via: Amsterdam Amstel, Amsterdam Centraal, Alkmaar
+    platform: 7b
+    carrier: NS
+    type: Intercity

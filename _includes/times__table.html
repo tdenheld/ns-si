@@ -1,0 +1,97 @@
+<!-- table displaying times -->
+<div class="times__table js-tm-table js-tm-table__{{ table.modality }}">
+
+    <!-- top row -->
+    <div class="times__row times__row--top js-times-row">
+        <div class="times__row-grid">
+            <div class="times__col js-times-col js-times-top-col-1">
+                Vertrek
+            </div>
+            {% if table.modality == 'train' %}
+            <div class="times__col js-times-col js-times-top-col-2-train">
+                Naar / Opmerkingen
+            </div>
+            {% else %}
+            <div class="times__col js-times-col js-times-top-col-2">
+                Lijn
+            </div>
+            {% endif %}
+            {% for col in table.cols %}
+            <div class="times__col {% if forloop.last %}hidden-xs{% endif %} js-times-col">{{ col.label }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- data rows -->
+    {% for row in table.rows %}
+    <div class="times__row js-times-row">
+        <div class="times__row-grid">
+            <div class="times__col times__col--start js-times-col">
+                <div class="times__time-container">
+                    <div class="times__line-150">
+                        {{ row.time }}
+                        {% if table.modality == 'btm' %} <span class="fw-normal">min</span>
+                        {% endif %}
+                    </div>
+                    {% if row.delay %}
+                    <div class="f14 f-red fw-normal txt-r">
+                        {{ row.delay }}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="times__col times__col--start js-times-col">
+                <div class="times__line-150">
+                    {{ row.direction }}
+                </div>
+                <div class="times__via">
+                    <div class="hidden-xs">
+                        {% if table.modality == 'train' %}via {% else %}richting {% endif %}
+                        {{ row.via }}
+                    </div>
+                    <div class="visible-xs">
+                        {% if table.modality == 'train' %}
+                        {{ row.type }}
+                        {% unless row.carrier == 'NS' %}
+                        ({{ row.carrier }})
+                        {% endunless %}
+                        {% else %}
+                        {{ row.via }}
+                        {% endif %}
+                    </div>
+                    {% if row.alert %}
+                    <div class="f-red">Dit is een gewijzigd
+                        <span class="js-times-alert">vertrek</span>{{ row.alert }}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div
+                class="times__col times__col--platform {% unless table.modality == 'train' %}times__col--platform--btm{% endunless %} js-times-col">
+                {{ row.platform }}
+            </div>
+            <div class="times__col {% if table.modality == 'train' %} times__col--{{ table.modality }} {% endif %} hidden-xs js-times-col">
+                {% if table.modality == "train" %}
+                <img src="/assets/img/carriers/{{ row.carrier }}.svg" class="times__logo" />
+                {% endif %}
+                <div>
+                    <div class="{% if row.type == 'Sprinter' %} fw-normal {% endif %}">
+                        {{ row.type }}
+                    </div>
+                    {% unless row.carrier == 'NS' %}
+                    <div class="times__carrier">
+                        {% if row.carrier == 'R-net' %}
+                        {{ row.carrier }}
+                        {% else %}
+                        {% assign words = row.carrier | split: '-' %}
+                        {% for word in words %} {{ word }} {% endfor %}
+                        {% endif %}
+                    </div>
+                    {% endunless %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
