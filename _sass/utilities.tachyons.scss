@@ -115,6 +115,14 @@
     .ph-2r-sm {padding-left: 2rem; padding-right: 2rem;}
     .pv-2r-sm {padding-top: 2rem; padding-bottom: 2rem;}  
 }
+@include sm-max {
+    .ma-auto-sm-max {margin: auto;}
+    .mh-auto-sm-max {margin: 0 auto;}
+    .mv-auto-sm-max {margin: auto 0;}
+    .pa-2r-sm-max {padding: 2rem;}  
+    .ph-2r-sm-max {padding-left: 2rem; padding-right: 2rem;}
+    .pv-2r-sm-max {padding-top: 2rem; padding-bottom: 2rem;}  
+}
 @include md {
     .ma-auto-md {margin: auto;}
     .mh-auto-md {margin: 0 auto;}
