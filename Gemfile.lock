@@ -262,6 +262,3 @@ DEPENDENCIES
   github-pages
   jekyll-autoprefixer
   jekyll-minifier
-
-BUNDLED WITH
-   2.1.4
